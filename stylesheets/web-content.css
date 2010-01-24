@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.banner{
+	background:url(../images/layout/glow-top.png) #05509e;
+	background-repeat: no-repeat;
+	background-position:bottom;
+	padding-top:20px;
+	padding-bottom:15px;
+	overflow:auto;
+}
+	.banner .logo{
+		background:url(../images/layout/logo.png);
+		height:99px;
+		width:213px;
+		margin: 0 auto 50px auto;
+	}
+	
+	.banner .decoration{
+		background-repeat:no-repeat;
+		background-position: center bottom;
+		height:280px;
+		width:290px;
+		position:absolute;
+		background-image: url(../images/layout/content/bottles.png);
+	}
+	
+	.banner h1{
+		font-weight:normal;
+		color:#c0d3e6;
+		color: rgba(255, 255, 255, .7);
+		margin:0 0 -.2em 0;
+		padding:0;
+		
+	}
+	
+	.banner p{
+		color:#c0d3e6;
+		color: rgba(255, 255, 255, .7);
+		line-height:1.5em;
+		margin: 0 0 1em 0;
+	}
+	
+	.banner .panelLeft{
+		float:left;
+		clear:left;
+		width:510px;
+	}
+	
+	.banner .panelRight{
+		float:right;
+		clear:right;
+		width:340px;
+	}
+	
+	
+	.banner .navigation{
+		overflow:auto;
+		margin-bottom:27px;
+	}
+		
+	.hexigon{
+		background:url(../images/layout/navigation/blank-hexigon.png);
+		background-position:center top;
+		background-repeat:no-repeat;
+		width:112px;
+		height:102px;
+		margin-top:-76px;
+		position:absolute;
+	}

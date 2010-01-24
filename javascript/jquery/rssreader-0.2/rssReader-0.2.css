@@ -1,0 +1,67 @@
+/*############################### News-Feed #############################*/
+#rss{
+	margin:0;
+	padding:0;
+	float:left;
+	width:96%;
+	font-size:10px;
+	background:none;
+}
+#rss #newsfeed{
+	margin:0;
+	padding:0;
+	border: none; /*1px solid #CCCCCC;*/
+	height:34em;
+	width:100%;
+	overflow: auto;
+	background:none;
+}
+
+/*Nested in side bar AI site box*/
+.box #rss #newsfeed{
+	margin:0;
+	padding:5px;
+	border: none; /*1px solid #CCCCCC;*/
+	height:34em;
+	width:100%;
+	overflow: auto;
+}
+
+#rss #newsfeed a {
+	/*Defined in main site CSS*/
+	color:#000000;
+}
+
+#rss #newsfeed .targetBlank{
+	font-size:1em;
+}
+
+#rss #newsfeed h4{
+	color:#000000;
+	font-size:1.3em;
+	margin:0;
+	padding:0;
+}
+
+#rss .readMore{
+	
+	clear:right;
+	text-align:center;
+	margin-bottom:1em;
+}
+
+#rss #newsfeed .date {
+	/*Defined in main site CSS*/
+}
+#rss #newsfeed .description{
+ 	/*Defined in main site CSS*/
+}
+#rss #newsfeed .description p{
+	/*Defined in main site CSS*/
+	margin:0;
+	padding:0;
+}
+#loading{
+	margin:40% 0% 0% 40%;
+	float:left;
+}

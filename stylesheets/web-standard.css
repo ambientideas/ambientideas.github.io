@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*HTML overrides*/
+*{
+	font-family: Helvetica, sans-serif
+}
+
+body{
+	margin:0;
+	background-color:#05509e;
+}
+
+p{
+	font-size: 10pt;
+}
+
+a{
+	color:#05509e;
+}
+
+a:visited{
+	color:#05509e;
+}
+
+
+
+
+/*Layout Specific Section by Section*/
+
+.top{
+	background:url(../images/layout/shadow-up-tile.jpg) #ffffff;
+	background-repeat:repeat-x;
+	background-position:center bottom;
+	height:20px;
+	clear:both;
+
+}
+
+.navigation{
+	overflow:auto;
+}
+
+	.navigation h2{
+		font-size:16pt;
+		margin-top: 1.2em;
+		margin-bottom: .5em;
+		
+	}
+	
+	.navigation a{
+		color:#457cb7;
+		
+	}
+
+.body{
+	width:100%;
+	padding-top:30px;
+	padding-bottom:1em;
+	overflow:auto;
+	background-color: #f5f8fb;
+	background-image: url(../images/layout/body-bg.jpg);
+	background-repeat: repeat-x;
+}
+
+	.body h1{
+		color:#457cb7;
+		margin:0;
+		padding:0;
+		background:url(../images/layout/divider-dark-horizontal.png);
+		background-repeat:no-repeat;
+		background-position:top;
+		padding-top:.5em;
+	}
+	
+	.body h2{
+		color:#457cb7;
+		font-size:16pt;
+		margin-top: 1.2em;
+		margin-bottom: .5em;
+	}
+	
+	.body h3{
+		color:#05509e;
+		font-size:10pt;
+		margin-top: 0;
+		margin-bottom: .5em;
+	}
+	
+	.body blockquote{
+		color:#525252;
+		font-size:1.2em;
+		margin:.3em 0 1em 0;
+		padding:0;
+	}
+	
+	.body p{
+		line-height:1.3em;
+		margin: 0 3% 1.5em 0;
+	}
+
+	.body .panelLeft{
+		float:left;
+		clear:left;
+		width:510px;
+	}
+	
+	.body .panelRight{
+		float:right;
+		clear:right;
+		width:324px;
+		color: #939393;
+		color: rgba(000,000,000, .5);
+		
+		margin-top: 30px;
+	}
+	
+	.body ul.linkList{
+		list-style:none;
+		margin:0;
+		padding:0;
+		font-size:.8em;
+		font-weight:bold;
+	}
+	
+		.body ul.linkList a{
+			color:#05509e;
+			text-decoration:none;
+			border-bottom: dotted 1px #05509e;
+			line-height:1.4em;
+		}
+		
+		.body ul.linkList a:hover{
+			color:#000;
+			text-decoration:none;
+			border-bottom: solid 1px #05509e;
+			line-height:1.4em;
+		}
+		
+	.body .box{
+		background:url(../images/layout/glow-top.png) #2970ba;
+		background-position:bottom;
+		width:280px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		
+		padding:10px;
+		margin-top:10px;
+
+		overflow:auto;
+	}
+		.body .box h3{
+			font-size:1.2em;
+			color:#ffffff;
+			margin:0;
+			padding:0;
+		}
+		
+		.body .box p{
+			color:#ffffff;
+		}
+		
+		.body .box a{
+			color:#FFFFFF;
+			font-weight:bold;
+		}
+		
+		.body .box ul{
+			color:#ffffff;
+			font-size:.8em;
+			margin:0;
+			padding:0;
+			list-style-position: inside;
+		}
+		
+		
+
+.footer{
+	background:url(../images/layout/shadow-up-tile.jpg);
+	background-repeat:repeat-x;
+	height:100px;
+	clear:both;
+	
+	/*Shadow border top. Push content lower*/
+	padding-top:20px;
+	
+	/*All fonts should be white*/
+	color:#ffffff;
+}
+
+	.footer .panelLeft{
+		float:left;
+		width:340px;
+	}
+	
+	.footer .panelRight{
+		float:right;
+		width:494px;
+	}
+	
+	.footer h3{
+		color:#c0d3e6;
+		color: rgba(255, 255, 255, .7);
+		margin:0 0 1em 0;
+		padding:0;
+	}
+	
+	.footer h4{
+		float:left;
+		clear:left;
+		
+		margin:0;
+		padding:0;
+		
+		font-size:10pt;
+	}
+	
+	.footer p{
+		font-size:10pt;
+	
+		float:left;
+		clear:right;
+		
+		margin:0 0 0 1em;
+		padding:0;
+	}
+	
+	.footer a{
+		color:#ffffff;
+	}
+	
+	.footer a:visited{
+		color:#ffffff;
+	}
+	
+	.pullquote{
+		width:446px;
+		overflow: auto;
+	}
+	
+		.pullquote .open{
+			background:url(../images/layout/pullquote-open.png);
+			background-repeat:no-repeat;
+			width:48px;
+			height:50px;
+			position:absolute;
+		}
+		
+		
+		
+		.pullquote .quote{
+			width:310px;
+			float:left;
+			margin:0.5em 4em 0 4em;
+			clear:right;
+		}
+		
+			.pullquote p{
+				font-size:1em;
+				font-weight:bold;
+				text-align:left;
+			}
+		
+		.pullquote .close{
+			background:url(../images/layout/pullquote-close.png);
+			background-repeat:no-repeat;
+			width:48px;
+			height:31px;
+			float:right;
+			margin-top:-1.4em;
+		}
+		
+		.pullquote .author{
+			text-align:center;
+			font-style: oblique;
+			font-size:.8em;
+			clear:both;
+		}
+
+/*Utility Selectors*/
+
+/*Restrain width of panel floats*/
+.wrapper{
+	width: 850px;
+	margin: 0 auto 0 auto;
+}
+
+.dividerHorizontal{
+	background:url(../images/layout/divider-horizontal.png);
+	height: 15px;
+	width: 500px;
+}
+
+.dividerVertical{
+	background:url(../images/layout/divider-vertical.png);
+	height: 274px;
+	width: 16px;
+	float:left;
+}
+
+.dividerLightVertical{
+	background:url(../images/layout/divider-light-vertical.png);
+	background-position: 0 -90px;
+	height: 160px;
+	width: 16px;
+	float:left;
+}
+
+.columnOneThird{
+	float:left;
+	width:30%;
+	margin-right:3%;
+	overflow:auto;
+}
+
+.columnOneHalf{
+	float:left;
+	width:48%;
+	margin-right:2%;
+	overflow:auto;
+}
+
+.clearer{
+	clear:both;
+}
