@@ -109,8 +109,7 @@ a:visited{
 		float:right;
 		clear:right;
 		width:324px;
-		color: #939393;
-		color: rgba(000,000,000, .5);
+		
 		
 		margin-top: 30px;
 	}
@@ -148,12 +147,18 @@ a:visited{
 		margin-top:10px;
 
 		overflow:auto;
+		
+		color:#ffffff;
 	}
 		.body .box h3{
 			font-size:1.2em;
 			color:#ffffff;
 			margin:0;
 			padding:0;
+		}
+		
+		.body .box h4{
+			color:#ffffff;	
 		}
 		
 		.body .box p{
