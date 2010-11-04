@@ -29,11 +29,11 @@ function edit_link( $link_id = '' ) {
 	if (!current_user_can( 'manage_links' ))
 		wp_die( __( 'Cheatin&#8217; uh?' ));
 
-	$_POST['link_url'] = wp_specialchars( $_POST['link_url'] );
-	$_POST['link_url'] = clean_url($_POST['link_url']);
-	$_POST['link_name'] = wp_specialchars( $_POST['link_name'] );
-	$_POST['link_image'] = wp_specialchars( $_POST['link_image'] );
-	$_POST['link_rss'] = clean_url($_POST['link_rss']);
+	$_POST['link_url'] = esc_html( $_POST['link_url'] );
+	$_POST['link_url'] = esc_url($_POST['link_url']);
+	$_POST['link_name'] = esc_html( $_POST['link_name'] );
+	$_POST['link_image'] = esc_html( $_POST['link_image'] );
+	$_POST['link_rss'] = esc_url($_POST['link_rss']);
 	if ( !isset($_POST['link_visible']) || 'N' != $_POST['link_visible'] )
 		$_POST['link_visible'] = 'Y';
 
@@ -54,12 +54,12 @@ function edit_link( $link_id = '' ) {
  */
 function get_default_link_to_edit() {
 	if ( isset( $_GET['linkurl'] ) )
-		$link->link_url = clean_url( $_GET['linkurl']);
+		$link->link_url = esc_url( $_GET['linkurl']);
 	else
 		$link->link_url = '';
 
 	if ( isset( $_GET['name'] ) )
-		$link->link_name = attribute_escape( $_GET['name']);
+		$link->link_name = esc_attr( $_GET['name']);
 	else
 		$link->link_name = '';
 
@@ -102,7 +102,7 @@ function wp_delete_link( $link_id ) {
  */
 function wp_get_link_cats( $link_id = 0 ) {
 
-	$cats = wp_get_object_terms( $link_id, 'link_category', 'fields=ids' );
+	$cats = wp_get_object_terms( $link_id, 'link_category', array('fields' => 'ids') );
 
 	return array_unique( $cats );
 }
@@ -128,7 +128,7 @@ function get_link_to_edit( $link_id ) {
  * @return unknown
  */
 function wp_insert_link( $linkdata, $wp_error = false ) {
-	global $wpdb, $current_user;
+	global $wpdb;
 
 	$defaults = array( 'link_id' => 0, 'link_name' => '', 'link_url' => '', 'link_rating' => 0 );
 
@@ -142,8 +142,13 @@ function wp_insert_link( $linkdata, $wp_error = false ) {
 	if ( !empty( $link_id ) )
 		$update = true;
 
-	if ( trim( $link_name ) == '' )
-		return 0;
+	if ( trim( $link_name ) == '' ) {
+		if ( trim( $link_url ) != '' ) {
+			$link_name = $link_url;
+		} else {
+			return 0;
+		}
+	}
 
 	if ( trim( $link_url ) == '' )
 		return 0;
@@ -161,7 +166,7 @@ function wp_insert_link( $linkdata, $wp_error = false ) {
 		$link_visible = 'Y';
 
 	if ( empty( $link_owner ) )
-		$link_owner = $current_user->id;
+		$link_owner = get_current_user_id();
 
 	if ( empty( $link_notes ) )
 		$link_notes = '';
@@ -181,19 +186,14 @@ function wp_insert_link( $linkdata, $wp_error = false ) {
 	}
 
 	if ( $update ) {
-		if ( false === $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->links SET link_url = %s,
-			link_name = %s, link_image = %s, link_target = %s,
-			link_visible = %s, link_description = %s, link_rating = %s,
-			link_rel = %s, link_notes = %s, link_rss = %s
-			WHERE link_id = %s", $link_url, $link_name, $link_image, $link_target, $link_visible, $link_description, $link_rating, $link_rel, $link_notes, $link_rss, $link_id ) ) ) {
+		if ( false === $wpdb->update( $wpdb->links, compact('link_url', 'link_name', 'link_image', 'link_target', 'link_description', 'link_visible', 'link_rating', 'link_rel', 'link_notes', 'link_rss'), compact('link_id') ) ) {
 			if ( $wp_error )
 				return new WP_Error( 'db_update_error', __( 'Could not update link in the database' ), $wpdb->last_error );
 			else
 				return 0;
 		}
 	} else {
-		if ( false === $wpdb->query( $wpdb->prepare( "INSERT INTO $wpdb->links (link_url, link_name, link_image, link_target, link_description, link_visible, link_owner, link_rating, link_rel, link_notes, link_rss) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-		$link_url,$link_name, $link_image, $link_target, $link_description, $link_visible, $link_owner, $link_rating, $link_rel, $link_notes, $link_rss ) ) ) {
+		if ( false === $wpdb->insert( $wpdb->links, compact('link_url', 'link_name', 'link_image', 'link_target', 'link_description', 'link_visible', 'link_owner', 'link_rating', 'link_rel', 'link_notes', 'link_rss') ) ) {
 			if ( $wp_error )
 				return new WP_Error( 'db_insert_error', __( 'Could not insert link into the database' ), $wpdb->last_error );
 			else
@@ -246,7 +246,7 @@ function wp_set_link_cats( $link_id = 0, $link_categories = array() ) {
 function wp_update_link( $linkdata ) {
 	$link_id = (int) $linkdata['link_id'];
 
-	$link = get_link( $link_id, ARRAY_A );
+	$link = get_bookmark( $link_id, ARRAY_A );
 
 	// Escape data pulled from DB.
 	$link = add_magic_quotes( $link );

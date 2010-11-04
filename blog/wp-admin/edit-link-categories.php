@@ -7,7 +7,7 @@
  */
 
 /** WordPress Administration Bootstrap */
-require_once('admin.php');
+require_once('./admin.php');
 
 // Handle bulk actions
 if ( isset($_GET['action']) && isset($_GET['delete']) ) {
@@ -18,13 +18,14 @@ if ( isset($_GET['action']) && isset($_GET['delete']) ) {
 		wp_die(__('Cheatin&#8217; uh?'));
 
 	if ( 'delete' == $doaction ) {
-		foreach( (array) $_GET['delete'] as $cat_ID ) {
-			$cat_name = get_term_field('name', $cat_ID, 'link_category');
-			$default_cat_id = get_option('default_link_category');
+		$cats = (array) $_GET['delete'];
+		$default_cat_id = get_option('default_link_category');
 
+		foreach( $cats as $cat_ID ) {
+			$cat_ID = (int) $cat_ID;
 			// Don't delete the default cats.
 			if ( $cat_ID == $default_cat_id )
-				wp_die(sprintf(__("Can&#8217;t delete the <strong>%s</strong> category: this is the default one"), $cat_name));
+				wp_die( sprintf( __("Can&#8217;t delete the <strong>%s</strong> category: this is the default one"), get_term_field('name', $cat_ID, 'link_category') ) );
 
 			wp_delete_term($cat_ID, 'link_category', array('default' => $default_cat_id));
 		}
@@ -39,7 +40,7 @@ if ( isset($_GET['action']) && isset($_GET['delete']) ) {
 		wp_redirect($location);
 		exit();
 	}
-} elseif ( isset($_GET['_wp_http_referer']) && ! empty($_GET['_wp_http_referer']) ) {
+} elseif ( ! empty($_GET['_wp_http_referer']) ) {
 	 wp_redirect( remove_query_arg( array('_wp_http_referer', '_wpnonce'), stripslashes($_SERVER['REQUEST_URI']) ) );
 	 exit;
 }
@@ -49,6 +50,13 @@ $title = __('Link Categories');
 wp_enqueue_script('admin-categories');
 if ( current_user_can('manage_categories') )
 	wp_enqueue_script('inline-edit-tax');
+
+add_contextual_help($current_screen, '<p>' . __('You can create groups of links by using link categories. Link category names must be unique and link categories are separate from the categories you use for posts.') . '</p>' .
+	'<p>' . __('You can delete link categories, but that action does not delete the links within the category. Instead, it moves them to the default link category.') . '</p>' .
+	'<p><strong>' . __('For more information:') . '</strong></p>' .
+	'<p>' . __('<a href="http://codex.wordpress.org/Links_Link_Categories_SubPanel" target="_blank">Link Categories Documentation</a>') . '</p>' .
+	'<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
+);
 
 require_once ('admin-header.php');
 
@@ -61,21 +69,21 @@ $messages[6] = __('Categories deleted.'); ?>
 
 <div class="wrap nosubsub">
 <?php screen_icon(); ?>
-<h2><?php echo wp_specialchars( $title );
+<h2><?php echo esc_html( $title );
 if ( isset($_GET['s']) && $_GET['s'] )
-	printf( '<span class="subtitle">' . __('Search results for &#8220;%s&#8221;') . '</span>', wp_specialchars( stripslashes($_GET['s']) ) ); ?>
+	printf( '<span class="subtitle">' . __('Search results for &#8220;%s&#8221;') . '</span>', esc_html( stripslashes($_GET['s']) ) ); ?>
 </h2>
 
 <?php if ( isset($_GET['message']) && ( $msg = (int) $_GET['message'] ) ) : ?>
-<div id="message" class="updated fade"><p><?php echo $messages[$msg]; ?></p></div>
+<div id="message" class="updated"><p><?php echo $messages[$msg]; ?></p></div>
 <?php $_SERVER['REQUEST_URI'] = remove_query_arg(array('message'), $_SERVER['REQUEST_URI']);
 endif; ?>
 
 <form class="search-form" action="" method="get">
 <p class="search-box">
-	<label class="hidden" for="link-category-search-input"><?php _e( 'Search Categories' ); ?>:</label>
-	<input type="text" class="search-input" id="link-category-search-input" name="s" value="<?php _admin_search_query(); ?>" />
-	<input type="submit" value="<?php _e( 'Search Categories' ); ?>" class="button" />
+	<label class="screen-reader-text" for="link-category-search-input"><?php _e( 'Search Categories' ); ?>:</label>
+	<input type="text" id="link-category-search-input" name="s" value="<?php _admin_search_query(); ?>" />
+	<input type="submit" value="<?php esc_attr_e( 'Search Categories' ); ?>" class="button" />
 </p>
 </form>
 <br class="clear" />
@@ -91,7 +99,7 @@ endif; ?>
 $pagenum = isset( $_GET['pagenum'] ) ? absint( $_GET['pagenum'] ) : 0;
 if ( empty($pagenum) )
 	$pagenum = 1;
-if( ! isset( $catsperpage ) || $catsperpage < 0 )
+if ( ! isset( $catsperpage ) || $catsperpage < 0 )
 	$catsperpage = 20;
 
 $page_links = paginate_links( array(
@@ -112,7 +120,7 @@ if ( $page_links )
 <option value="" selected="selected"><?php _e('Bulk Actions'); ?></option>
 <option value="delete"><?php _e('Delete'); ?></option>
 </select>
-<input type="submit" value="<?php _e('Apply'); ?>" name="doaction" id="doaction" class="button-secondary action" />
+<input type="submit" value="<?php esc_attr_e('Apply'); ?>" name="doaction" id="doaction" class="button-secondary action" />
 <?php wp_nonce_field('bulk-link-categories'); ?>
 </div>
 
@@ -166,7 +174,7 @@ if ( $page_links )
 <option value="" selected="selected"><?php _e('Bulk Actions'); ?></option>
 <option value="delete"><?php _e('Delete'); ?></option>
 </select>
-<input type="submit" value="<?php _e('Apply'); ?>" name="doaction2" id="doaction2" class="button-secondary action" />
+<input type="submit" value="<?php esc_attr_e('Apply'); ?>" name="doaction2" id="doaction2" class="button-secondary action" />
 </div>
 
 <br class="clear" />
@@ -189,29 +197,30 @@ if ( $page_links )
 	$category = (object) array(); $category->parent = 0; do_action('add_link_category_form_pre', $category); ?>
 
 <div class="form-wrap">
-<h3><?php _e('Add Category'); ?></h3>
+<h3><?php _e('Add Link Category'); ?></h3>
 <div id="ajax-response"></div>
 <form name="addcat" id="addcat" class="add:the-list: validate" method="post" action="link-category.php">
 <input type="hidden" name="action" value="addcat" />
 <?php wp_original_referer_field(true, 'previous'); wp_nonce_field('add-link-category'); ?>
 
 <div class="form-field form-required">
-	<label for="name"><?php _e('Category name') ?></label>
-	<input name="name" id="name" type="text" value="" size="40" aria-required="true" />
+	<label for="name"><?php _e('Link Category name') ?></label>
+	<input name="name" id="link-name" type="text" value="" size="40" aria-required="true" />
 </div>
-
+<?php if ( !global_terms_enabled() ) { ?>
 <div class="form-field">
-	<label for="slug"><?php _e('Category slug') ?></label>
-	<input name="slug" id="slug" type="text" value="" size="40" />
+	<label for="slug"><?php _e('Link Category slug') ?></label>
+	<input name="slug" id="link-slug" type="text" value="" size="40" />
 	<p><?php _e('The &#8220;slug&#8221; is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.'); ?></p>
 </div>
-
+<?php } ?>
 <div class="form-field">
 	<label for="description"><?php _e('Description (optional)') ?></label>
-	<textarea name="description" id="description" rows="5" cols="40"></textarea>
+	<textarea name="description" id="link-description" rows="5" cols="40"></textarea>
+	<p><?php _e('The description is not prominent by default; however, some themes may show it.'); ?></p>
 </div>
 
-<p class="submit"><input type="submit" class="button" name="submit" value="<?php _e('Add Category'); ?>" /></p>
+<p class="submit"><input type="submit" class="button" name="submit" value="<?php esc_attr_e('Add Category'); ?>" /></p>
 <?php do_action('edit_link_category_form', $category); ?>
 </form>
 </div>
@@ -224,20 +233,5 @@ if ( $page_links )
 </div><!-- /col-container -->
 </div><!-- /wrap -->
 
-<script type="text/javascript">
-/* <![CDATA[ */
-(function($){
-	$(document).ready(function(){
-		$('#doaction, #doaction2').click(function(){
-			if ( $('select[name^="action"]').val() == 'delete' ) {
-				var m = '<?php echo js_escape(__("You are about to delete the selected link categories.\n  'Cancel' to stop, 'OK' to delete.")); ?>';
-				return showNotice.warn(m);
-			}
-		});
-	});
-})(jQuery);
-/* ]]> */
-</script>
-
-<?php inline_edit_term_row('edit-link-categories'); ?>
-<?php include('admin-footer.php'); ?>
+<?php inline_edit_term_row('edit-link-categories', 'link_category'); ?>
+<?php include('./admin-footer.php'); ?>

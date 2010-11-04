@@ -1,26 +1,26 @@
 === SyntaxHighlighter Evolved ===
-Contributors: Viper007Bond
+Contributors: Viper007Bond, Automattic
 Donate link: http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/donate/
 Tags: code, sourcecode, php, xhtml, html, css
 Requires at least: 2.7
-Tested up to: 2.8
+Tested up to: 2.9
 Stable tag: trunk
 
-Easily post syntax-highlighted code to your site without having to modify the code at all.
+Easily post syntax-highlighted code to your site without having to modify the code at all. As seen on WordPress.com.
 
 == Description ==
 
-SyntaxHighlighter Evolved allows you to easily post syntax-highlighted code to your site without loosing it's formatting or making any manual changes. It uses the [SyntaxHighlighter JavaScript package by Alex Gorbatchev](http://alexgorbatchev.com/wiki/SyntaxHighlighter) and a bit of code by [Andrew Ozz of Automattic](http://wordpress.com/).
+SyntaxHighlighter Evolved allows you to easily post syntax-highlighted code to your site without loosing it's formatting or making any manual changes. It uses the [SyntaxHighlighter JavaScript package by Alex Gorbatchev](http://alexgorbatchev.com/wiki/SyntaxHighlighter).
 
-For a list of supported languages (all widely used languages are supported), please [click here](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Brushes).
+For a live demo, see [this plugin's homepage](http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/).
 
-**SyntaxHighlighter "Evolved"? Why Evolved?**
+For a list of supported languages (most widely used languages are supported), see the [WordPress.com support document](http://en.support.wordpress.com/code/posting-source-code/).
 
-Starting with v2.0.0, this plugin was renamed from "SyntaxHighlighter" to "SyntaxHighlighter Evolved". This was done to better stand out against the many very poorly named [forks](http://en.wikipedia.org/wiki/Fork_%28software_development%29) of v1.x of this plugin. I am not an author of any of those plugins, they just used my old code as a base for their version. Although I am of course biased, I'd argue this plugin is the best of all of them.
+*[As seen on WordPress.com.](http://en.blog.wordpress.com/2009/12/02/better-source-code-posting/)*
 
 == Installation ==
 
-###Updgrading From A Previous Version###
+###Upgrading From A Previous Version###
 
 To upgrade from a previous version of this plugin, delete the entire folder and files from the previous version of the plugin and then follow the installation instructions below.
 
@@ -44,13 +44,9 @@ The shortcodes accept a wide variety of parameters. For details, see the bottom 
 
 == Frequently Asked Questions ==
 
-= The code boxes seem to be missing their styling. What's wrong? =
-
-Make sure your theme's `header.php` file has `<?php wp_head(); ?>` somewhere inside of the `<head>`, otherwise the CSS files won't be loaded.
-
 = The code is just being displayed raw. It isn't being converted into a code box or anything. What's wrong?  =
 
-Make sure your theme's `footer.php` file has `<?php wp_footer(); ?>` somewhere inside of it, otherwise the Javascript files won't be loaded.
+Make sure your theme's `footer.php` file has `<?php wp_footer(); ?>` somewhere inside of it, otherwise the plugin won't be able to do it's thing.
 
 == Screenshots ==
 
@@ -59,32 +55,114 @@ Make sure your theme's `footer.php` file has `<?php wp_footer(); ?>` somewhere i
 
 == ChangeLog ==
 
-**Version 2.1.0**
+= Version 2.3.8 =
+
+* Disable `[latex]` to avoid collisions with LaTeX rendering plugins. Use `[tex]` instead if you want to post LaTeX source.
+
+= Version 2.3.7 =
+
+* Add a checkbox to settings page to force all language brushes to always be loaded, even if they aren't needed. This is incase anyone wants to use the `<pre>` tags directly (without the shortcode), for example if they use [this Windows Live Writer plugin](http://sourcecodeplugin.codeplex.com/).
+
+= Version 2.3.6 =
+
+* Add F-Sharp brush by [Steve Gilham](http://stevegilham.blogspot.com/2009/10/syntaxhighlighter-20-brushes-for-f-and.html).
+* Add MATLAB brush by [Will Schleter](http://ef.engr.utk.edu/matlab/syntaxhighlighter/) (only highlights popular keywords to avoid browser lockups).
+* Prevent double-encoding of shortcode contents save. I still have no idea why the `content_save_pre` filter is sometimes run twice.
+
+= Version 2.3.5 =
+
+* Move third-party brushes to their own folder to make it easier to keep track of them.
+* Fix broken Objective-C brush. Props Yoav.
+* Add LaTeX brush. This won't render LaTex, it will merely allow you to post LaTeX souce. Props [Jorge Martinez de Salinas](http://www.jorgemarsal.com/blog/2009/06/13/latex-brush-for-syntax-highlighter-plus-wordpress-plugin/).
+
+= Version 2.3.4 =
+
+* Use the `get_comment_text` filter instead of the `comment_text` filter to make sure to catch the output everywhere.
+* Allow `on` and `off` as parameter values.
+
+= Version 2.3.3 =
+
+* Add `print` to PHP keywords. Props bundyxc.
+* Changes to make this plugin work properly with code that creates posts from outside of the admin area, namely the [P2 theme](http://p2theme.com/).
+
+= Version 2.3.2 =
+
+* Allow `\0` inside of code posts for low-access users. Previously it was stripped by KSES. Also introduces new filter that can be used to escape other similar types of strings.
+* Remove `min-height` CSS. I don't see the point of it and it's screwing it up in certain themes.
+
+= Version 2.3.1 =
+
+* Additional CSS to help prevent themes from breaking SyntaxHighlighter (stopping `code { display: block; }`).
+* Add a grey border to the default theme when line numbering is enabled.
+* Italian transation update thanks to [gidibao](http://gidibao.net/).
+* Minor code improvements.
+
+= Version 2.3.0 =
+
+Major overhaul, mainly to extend flexibility so that this plugin could be used on WordPress.com without any more plugin code modification (only actions/filters are used instead to modify it).
+
+* Updated SyntaxHighlighter package to v2.1.364. Highlights of the [changelog](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Changes:2.1.364) include:
+	* ColdFusion brush (aliases: `coldfusion`, `cf`)
+	* Erlang brush (aliases: `erl`, `erlang`)
+	* Objective-C brush (aliases: `objc`, `obj-c`)
+	* Eclipse theme
+	* `padlinenumbers` parameter. Set it to `false` for no line number padding, `true` for automatic padding, or an integer (number) for forced padding.
+	* `rb` alias for Ruby
+* Commenters can now use this plugin to post code.
+* Plugin's shortcodes now work inside of the text widget again. Requires WordPress 2.9+ though.
+* Overhaul of the TinyMCE plugin that assists in keeping your code sound when switching editor views. Thanks to Andrew Ozz!
+* This plugin's stylesheets are now dynamically loaded. If they aren't needed, they aren't loaded.
+* Lots of sanitization of shortcode attributes. Invalid keys/values are no longer used.
+* New filter to control what shortcodes are registered. Used by WordPress.com to trim down the number of them.
+* Saving of user's settings is now done using `register_setting()` instead of manually handing `$_POST`. Yay!
+* By default, a post meta is used to mark posts as being encoded using the 2.x encoding format. This is bad for a site like WordPress.com. You can use the new `syntaxhighlighter_pre_getcodeformat` filter to return `1` or `2` (based on say `post_modified`). See `SyntaxHighlighter:get_code_format()` for more details. Don't forget to `remove_action( 'save_post', array(&$SyntaxHighlighter, 'mark_as_encoded'), 10, 2 );` to stop the post meta from being added.
+* New `syntaxhighlighter_precode` filter to modify raw code before it's highlighted.
+* New `syntaxhighlighter_democode` filter to modify example code on the settings page.
+
+Localizations:
+
+* Danish translation update thanks to [Georg S. Adamsen](http://wordpress.blogos.dk/).
+* Chinese translation thanks to Hinker Liu. Will need updating for v2.3.0.
+
+= Version 2.2.1 =
+
+* Italian transation thanks to [gidibao](http://gidibao.net/index.php/2009/07/22/syntaxhighlighter-evolved-in-italiano/).
+
+= Version 2.2.0 =
+
+* Stop whitespace from being stripped when switching editor views. Props [Abel Braaksma](http://www.undermyhat.org/blog/2009/07/fix-for-leading-whitespace-bug-in-syntaxhighlighter-evolved-for-wordpress/).
+* Fixed an issue with SyntaxHighlighter itself in which the Bash highlighter had issues with `<` and `>`.
+* Force a specific font size for the code so themes don't mess with it.
+* Allow the usage of custom aliases that aren't allowed by the highlighting package. Props [Anton Shevchuk](http://anton.shevchuk.name/).
+* Danish translation thanks to [Georg S. Adamsen](http://wordpress.blogos.dk/2009/05/07/syntaks-farvning-%E2%80%93-syntax-highlighting/).
+* Turkish translation thanks to [Alper](http://turkcekaynak.net/).
+
+= Version 2.1.0 =
 
 * Updated to reflect the new features of [v2.0.320 of Alex's script](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Changes:2.0.320). Note the `stripBrs` parameter is not supported in my plugin as it is not needed in this implementation.
 
-**Version 2.0.1**
+= Version 2.0.1 =
 
 * Andrew Ozz was kind enough to fix a bug related to `<p>`'s being stripped when switching from the Visual to HTML tab
 * Added a link to the settings page to the plugins page in the admin area
 
-**Version 2.0.0**
+= Version 2.0.0 =
 
 * Complete recode from scratch. Features v2 of Alex Gorbatchev's script, usage of shortcodes, and so much more.
 
-**Version 1.1.1**
+= Version 1.1.1 =
 
 * Encode single quotes so `wptexturize()` doesn't transform them into fancy quotes and screw up code.
 
-**Version 1.1.0**
+= Version 1.1.0 =
 
 * mdawaffe [fixed](http://dev.wp-plugins.org/ticket/703) an encoding issue relating to kses and users without the `unfiltered_html` capability. Mad props to mdawaffe.
 
-**Version 1.0.1**
+= Version 1.0.1 =
 
 * Minor CSS fixes.
 * Filter text widgets to allow posting of code.
 
-**Version 1.0.0**
+= Version 1.0.0 =
 
 * Initial release!

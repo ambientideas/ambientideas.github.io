@@ -16,7 +16,7 @@
  * register/enqueue new scripts.
  *
  * @since r16
- * @see WP_Scripts::print_scripts()
+ * @see WP_Dependencies::print_scripts()
  */
 function wp_print_scripts( $handles = false ) {
 	do_action( 'wp_print_scripts' );
@@ -38,14 +38,21 @@ function wp_print_scripts( $handles = false ) {
  * Register new JavaScript file.
  *
  * @since r16
- * @see WP_Scripts::add() For parameter information.
+ * @param string $handle Script name
+ * @param string $src Script url
+ * @param array $deps (optional) Array of script names on which this script depends
+ * @param string|bool $ver (optional) Script version (used for cache busting), set to NULL to disable
+ * @param bool (optional) Wether to enqueue the script before </head> or before </body>
+ * @return null
  */
-function wp_register_script( $handle, $src, $deps = array(), $ver = false ) {
+function wp_register_script( $handle, $src, $deps = array(), $ver = false, $in_footer = false ) {
 	global $wp_scripts;
 	if ( !is_a($wp_scripts, 'WP_Scripts') )
 		$wp_scripts = new WP_Scripts();
 
 	$wp_scripts->add( $handle, $src, $deps, $ver );
+	if ( $in_footer )
+		$wp_scripts->add_data( $handle, 'group', 1 );
 }
 
 /**
@@ -54,7 +61,7 @@ function wp_register_script( $handle, $src, $deps = array(), $ver = false ) {
  * Localizes only if script has already been added.
  *
  * @since r16
- * @see WP_Script::localize()
+ * @see WP_Scripts::localize()
  */
 function wp_localize_script( $handle, $object_name, $l10n ) {
 	global $wp_scripts;
@@ -84,9 +91,9 @@ function wp_deregister_script( $handle ) {
  * Registers the script if src provided (does NOT overwrite) and enqueues.
  *
  * @since r16
- * @see WP_Script::add(), WP_Script::enqueue()
-*/
-function wp_enqueue_script( $handle, $src = false, $deps = array(), $ver = false ) {
+ * @see wp_register_script() For parameter information.
+ */
+function wp_enqueue_script( $handle, $src = false, $deps = array(), $ver = false, $in_footer = false ) {
 	global $wp_scripts;
 	if ( !is_a($wp_scripts, 'WP_Scripts') )
 		$wp_scripts = new WP_Scripts();
@@ -94,6 +101,33 @@ function wp_enqueue_script( $handle, $src = false, $deps = array(), $ver = false
 	if ( $src ) {
 		$_handle = explode('?', $handle);
 		$wp_scripts->add( $_handle[0], $src, $deps, $ver );
+		if ( $in_footer )
+			$wp_scripts->add_data( $_handle[0], 'group', 1 );
 	}
 	$wp_scripts->enqueue( $handle );
+}
+
+/**
+ * Check whether script has been added to WordPress Scripts.
+ *
+ * The values for list defaults to 'queue', which is the same as enqueue for
+ * scripts.
+ *
+ * @since WP unknown; BP unknown
+ *
+ * @param string $handle Handle used to add script.
+ * @param string $list Optional, defaults to 'queue'. Others values are 'registered', 'queue', 'done', 'to_do'
+ * @return bool
+ */
+function wp_script_is( $handle, $list = 'queue' ) {
+	global $wp_scripts;
+	if ( !is_a($wp_scripts, 'WP_Scripts') )
+		$wp_scripts = new WP_Scripts();
+
+	$query = $wp_scripts->query( $handle, $list );
+
+	if ( is_object( $query ) )
+		return true;
+
+	return $query;
 }

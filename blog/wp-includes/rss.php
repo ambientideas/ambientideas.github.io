@@ -12,6 +12,11 @@
  * @subpackage MagpieRSS
  */
 
+/**
+ * Deprecated. Use SimplePie (class-simplepie.php) instead.
+ */
+_deprecated_file( basename( __FILE__ ), '3.0', WPINC . '/class-simplepie.php' );
+
 /*
  * Hook to use another RSS object instead of MagpieRSS
  */
@@ -62,7 +67,7 @@ class MagpieRSS {
 		$this->parser = $parser;
 
 		# pass in parser, and a reference to this object
-		# setup handlers
+		# set up handlers
 		#
 		xml_set_object( $this->parser, $this );
 		xml_set_element_handler($this->parser,
@@ -170,7 +175,7 @@ class MagpieRSS {
 		{
 			// if tags are inlined, then flatten
 			$attrs_str = join(' ',
-					array_map('map_attrs',
+					array_map(array('MagpieRSS', 'map_attrs'),
 					array_keys($attrs),
 					array_values($attrs) ) );
 
@@ -456,7 +461,7 @@ function fetch_rss ($url) {
 
 		// else attempt a conditional get
 
-		// setup headers
+		// set up headers
 		if ( $cache_status == 'STALE' ) {
 			$rss = $cache->get( $url );
 			if ( isset($rss->etag) and $rss->last_modified ) {
@@ -535,7 +540,7 @@ endif;
  * @param array $headers Optional. Headers to send to the URL.
  * @return Snoopy style response
  */
-function _fetch_remote_file ($url, $headers = "" ) {
+function _fetch_remote_file($url, $headers = "" ) {
 	$resp = wp_remote_request($url, array('headers' => $headers, 'timeout' => MAGPIE_FETCH_TIME_OUT));
 	if ( is_wp_error($resp) ) {
 		$error = array_shift($resp->errors);
@@ -546,10 +551,23 @@ function _fetch_remote_file ($url, $headers = "" ) {
 		$resp->error = $error[0] . "\n"; //\n = Snoopy compatibility
 		return $resp;
 	}
+
+	// Snoopy returns headers unprocessed.
+	// Also note, WP_HTTP lowercases all keys, Snoopy did not.
+	$return_headers = array();
+	foreach ( $resp['headers'] as $key => $value ) {
+		if ( !is_array($value) ) {
+			$return_headers[] = "$key: $value";
+		} else {
+			foreach ( $value as $v )
+				$return_headers[] = "$key: $v";
+		}
+	}
+
 	$response = new stdClass;
 	$response->status = $resp['response']['code'];
 	$response->response_code = $resp['response']['code'];
-	$response->headers = $resp['headers'];
+	$response->headers = $return_headers;
 	$response->results = $resp['body'];
 
 	return $response;
@@ -582,11 +600,11 @@ function _response_to_rss ($resp) {
 				$val = "";
 			}
 
-			if ( $field == 'ETag' ) {
+			if ( $field == 'etag' ) {
 				$rss->etag = $val;
 			}
 
-			if ( $field == 'Last-Modified' ) {
+			if ( $field == 'last-modified' ) {
 				$rss->last_modified = $val;
 			}
 		}
@@ -606,7 +624,7 @@ function _response_to_rss ($resp) {
 }
 
 /**
- * Setup constants with default values, unless user overrides.
+ * Set up constants with default values, unless user overrides.
  *
  * @since unknown
  * @package External
@@ -710,18 +728,9 @@ class RSSCache {
 	Output:		true on sucess
 \*=======================================================================*/
 	function set ($url, $rss) {
-		global $wpdb;
 		$cache_option = 'rss_' . $this->file_name( $url );
-		$cache_timestamp = 'rss_' . $this->file_name( $url ) . '_ts';
 
-		// shouldn't these be using get_option() ?
-		if ( !$wpdb->get_var( $wpdb->prepare( "SELECT option_name FROM $wpdb->options WHERE option_name = %s", $cache_option ) ) )
-			add_option($cache_option, '', '', 'no');
-		if ( !$wpdb->get_var( $wpdb->prepare( "SELECT option_name FROM $wpdb->options WHERE option_name = %s", $cache_timestamp ) ) )
-			add_option($cache_timestamp, '', '', 'no');
-
-		update_option($cache_option, $rss);
-		update_option($cache_timestamp, time() );
+		set_transient($cache_option, $rss, $this->MAX_AGE);
 
 		return $cache_option;
 	}
@@ -736,14 +745,12 @@ class RSSCache {
 		$this->ERROR = "";
 		$cache_option = 'rss_' . $this->file_name( $url );
 
-		if ( ! get_option( $cache_option ) ) {
+		if ( ! $rss = get_transient( $cache_option ) ) {
 			$this->debug(
 				"Cache doesn't contain: $url (cache option: $cache_option)"
 			);
 			return 0;
 		}
-
-		$rss = get_option( $cache_option );
 
 		return $rss;
 	}
@@ -757,23 +764,12 @@ class RSSCache {
 \*=======================================================================*/
 	function check_cache ( $url ) {
 		$this->ERROR = "";
-		$cache_option = $this->file_name( $url );
-		$cache_timestamp = 'rss_' . $this->file_name( $url ) . '_ts';
+		$cache_option = 'rss_' . $this->file_name( $url );
 
-		if ( $mtime = get_option($cache_timestamp) ) {
-			// find how long ago the file was added to the cache
-			// and whether that is longer then MAX_AGE
-			$age = time() - $mtime;
-			if ( $this->MAX_AGE > $age ) {
-				// object exists and is current
+		if ( get_transient($cache_option) ) {
+			// object exists and is current
 				return 'HIT';
-			}
-			else {
-				// object exists but is old
-				return 'STALE';
-			}
-		}
-		else {
+		} else {
 			// object does not exist
 			return 'MISS';
 		}
@@ -893,8 +889,8 @@ function wp_rss( $url, $num_items = -1 ) {
 		foreach ( (array) $rss->items as $item ) {
 			printf(
 				'<li><a href="%1$s" title="%2$s">%3$s</a></li>',
-				clean_url( $item['link'] ),
-				attribute_escape( strip_tags( $item['description'] ) ),
+				esc_url( $item['link'] ),
+				esc_attr( strip_tags( $item['description'] ) ),
 				htmlentities( $item['title'] )
 			);
 		}

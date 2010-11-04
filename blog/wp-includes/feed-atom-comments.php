@@ -5,41 +5,41 @@
  * @package WordPress
  */
 
-header('Content-Type: application/atom+xml; charset=' . get_option('blog_charset'), true);
+header('Content-Type: ' . feed_content_type('atom') . '; charset=' . get_option('blog_charset'), true);
 echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '" ?' . '>';
 ?>
 <feed
 	xmlns="http://www.w3.org/2005/Atom"
 	xml:lang="<?php echo get_option('rss_language'); ?>"
-	<?php do_action('atom_ns'); ?>
+	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	<?php do_action('atom_ns'); do_action('atom_comments_ns'); ?>
 >
 	<title type="text"><?php
 		if ( is_singular() )
-			printf(ent2ncr(__('Comments on: %s')), get_the_title_rss());
+			printf(ent2ncr(__('Comments on %s')), get_the_title_rss());
 		elseif ( is_search() )
-			printf(ent2ncr(__('Comments for %1$s searching on %2$s')), get_bloginfo_rss( 'name' ), attribute_escape(get_search_query()));
+			printf(ent2ncr(__('Comments for %1$s searching on %2$s')), get_bloginfo_rss( 'name' ), get_search_query() );
 		else
 			printf(ent2ncr(__('Comments for %s')), get_bloginfo_rss( 'name' ) . get_wp_title_rss());
 	?></title>
 	<subtitle type="text"><?php bloginfo_rss('description'); ?></subtitle>
 
-	<updated><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_lastcommentmodified('GMT')); ?></updated>
-	<?php the_generator( 'atom' ); ?>
+	<updated><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_lastcommentmodified('GMT'), false); ?></updated>
 
 <?php if ( is_singular() ) { ?>
-	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php echo get_comments_link(); ?>" />
+	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php comments_link_feed(); ?>" />
 	<link rel="self" type="application/atom+xml" href="<?php echo get_post_comments_feed_link('', 'atom'); ?>" />
 	<id><?php echo get_post_comments_feed_link('', 'atom'); ?></id>
 <?php } elseif(is_search()) { ?>
-	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php echo get_option('home') . '?s=' . attribute_escape(get_search_query()); ?>" />
+	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php echo home_url() . '?s=' . get_search_query(); ?>" />
 	<link rel="self" type="application/atom+xml" href="<?php echo get_search_comments_feed_link('', 'atom'); ?>" />
 	<id><?php echo get_search_comments_feed_link('', 'atom'); ?></id>
 <?php } else { ?>
-	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php bloginfo_rss('home'); ?>" />
+	<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php bloginfo_rss('url'); ?>" />
 	<link rel="self" type="application/atom+xml" href="<?php bloginfo_rss('comments_atom_url'); ?>" />
 	<id><?php bloginfo_rss('comments_atom_url'); ?></id>
 <?php } ?>
-
+<?php do_action('comments_atom_head'); ?>
 <?php
 if ( have_comments() ) : while ( have_comments() ) : the_comment();
 	$comment_post = get_post($comment->comment_post_ID);
@@ -63,9 +63,9 @@ if ( have_comments() ) : while ( have_comments() ) : the_comment();
 
 		</author>
 
-		<id><?php comment_link(); ?></id>
-		<updated><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_comment_time('Y-m-d H:i:s', true), false); ?></updated>
-		<published><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_comment_time('Y-m-d H:i:s', true), false); ?></published>
+		<id><?php comment_guid(); ?></id>
+		<updated><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_comment_time('Y-m-d H:i:s', true, false), false); ?></updated>
+		<published><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_comment_time('Y-m-d H:i:s', true, false), false); ?></published>
 <?php if ( post_password_required($comment_post) ) : ?>
 		<content type="html" xml:base="<?php comment_link(); ?>"><![CDATA[<?php echo get_the_password_form(); ?>]]></content>
 <?php else : // post pass ?>
@@ -73,12 +73,12 @@ if ( have_comments() ) : while ( have_comments() ) : the_comment();
 <?php endif; // post pass
 	// Return comment threading information (http://www.ietf.org/rfc/rfc4685.txt)
 	if ( $comment->comment_parent == 0 ) : // This comment is top level ?>
-		<thr:in-reply-to ref="<?php the_guid() ?>" href="<?php the_permalink_rss() ?>" type="<?php bloginfo_rss('html_type'); ?>" />
+		<thr:in-reply-to ref="<?php the_guid(); ?>" href="<?php the_permalink_rss() ?>" type="<?php bloginfo_rss('html_type'); ?>" />
 <?php else : // This comment is in reply to another comment
 	$parent_comment = get_comment($comment->comment_parent);
 	// The rel attribute below and the id tag above should be GUIDs, but WP doesn't create them for comments (unlike posts). Either way, its more important that they both use the same system
 ?>
-		<thr:in-reply-to ref="<?php echo get_comment_link($parent_comment) ?>" href="<?php echo get_comment_link($parent_comment) ?>" type="<?php bloginfo_rss('html_type'); ?>" />
+		<thr:in-reply-to ref="<?php comment_guid($parent_comment) ?>" href="<?php echo get_comment_link($parent_comment) ?>" type="<?php bloginfo_rss('html_type'); ?>" />
 <?php endif;
 	do_action('comment_atom_entry', $comment->comment_ID, $comment_post->ID);
 ?>
