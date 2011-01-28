@@ -1,0 +1,1151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BackUpWordPress\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2007-09-02 22:46+0100\n"
+"Last-Translator: rr <rol@rm-r.at>\n"
+"Language-Team: Roland Rust <wordpress@designpraxis.at>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: AUSTRIA\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: E:\\www.designpraxis.at\\wordpress\\wp-content\\plugins\\\n"
+"X-Poedit-SearchPath-0: BackUpWP\n"
+
+#: BackUpWP/functions.php:62
+msgid "BackUpWordPress Help Index"
+msgstr "BackUpWordPress Hilfe Index"
+
+#: BackUpWP/functions.php:64
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:96
+msgid "Looking for a less komplex Solution? Please swith to "
+msgstr "Suchen Sie nach einer einfacheren Lösung? Wechseln Sie in den"
+
+#: BackUpWP/functions.php:66
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:33
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:42
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:97
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:136
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:163
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:205
+msgid "EasyMode"
+msgstr "EasyMode"
+
+#: BackUpWP/functions.php:68
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:36
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:39
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:43
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:184
+msgid "AdvancedMode"
+msgstr "AdvancedMode"
+
+#: BackUpWP/functions.php:73
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:237
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:13
+msgid "Manage Backups"
+msgstr "Backups Verwalten"
+
+#: BackUpWP/functions.php:74
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:143
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:104
+msgid "Manage Backup Presets"
+msgstr "Backup Voreinstellungen Verwalten"
+
+#: BackUpWP/functions.php:75
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:5
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:142
+msgid "Manage Backup Schedules"
+msgstr "Backup Zeitpläne Verwalten"
+
+#: BackUpWP/functions.php:76
+#: BackUpWP/bkpwp-classes/interface.php:35
+#: BackUpWP/bkpwp-classes/interface.php:43
+msgid "Options"
+msgstr "Optionen"
+
+#: BackUpWP/functions.php:84
+#: BackUpWP/bkpwp-classes/interface.php:34
+#: BackUpWP/bkpwp-classes/interface.php:38
+#: BackUpWP/bkpwp-classes/manage_backups.php:859
+#: BackUpWP/bkpwp-classes/manage_backups.php:860
+msgid "BackUpWordPress"
+msgstr "BackUpWordPress"
+
+#: BackUpWP/functions.php:85
+msgid "Check for a new version of BackUpWordPress!"
+msgstr "Hier gibt es die neueste Version von BackUpWordPress!"
+
+#: BackUpWP/functions.php:86
+msgid "Latest Backups"
+msgstr "Letze Backups"
+
+#: BackUpWP/functions.php:111
+msgid "Next scheduled Backup"
+msgstr "Nächstes geplantes Backup"
+
+#: BackUpWP/functions.php:119
+msgid "Schedules inactive"
+msgstr "Zeitpläne inaktiv"
+
+#: BackUpWP/functions-interface.php:197
+#: BackUpWP/functions-interface.php:206
+#: BackUpWP/functions-interface.php:215
+msgid "scheduling..."
+msgstr "Zeitplan wird erstellt..."
+
+#: BackUpWP/bkpwp-classes/interface.php:36
+#: BackUpWP/bkpwp-classes/interface.php:44
+msgid "Help"
+msgstr "Hilfe"
+
+#: BackUpWP/bkpwp-classes/interface.php:40
+msgid "Backup Presets"
+msgstr "Backup Voreinstellungen"
+
+#: BackUpWP/bkpwp-classes/interface.php:41
+msgid "Scheduled Backups"
+msgstr "Geplante Backups"
+
+#: BackUpWP/bkpwp-classes/schedule.php:72
+msgid "Test schedule running in 30 seconds"
+msgstr "zeitgeplantes Testbackup läuft in 30 Sekunden an"
+
+#: BackUpWP/bkpwp-classes/options.php:56
+msgid "You do not have sufficent privileges to do Full Backups."
+msgstr "Sie haben nicht die ausreichende Berechtigung um Backups zu erstellen"
+
+#: BackUpWP/bkpwp-classes/options.php:65
+msgid "Path is not within your webroot. Please specify a writable directory inside "
+msgstr "Dieser Pfad liegt nicht innerhalb Ihres Web-Wurzelverzeichnisses. Spezifizieren Sie bitte ein für den Webserver schreibbares Verzeichniss innerhalb von"
+
+#: BackUpWP/bkpwp-classes/options.php:71
+msgid "Wrong Backup Path. Directory does not exist and this script was not able to create it."
+msgstr "Falscher Backup Pfad. Das Verzeichnis existiert nicht und das Skript war nicht in der Lage es anzulegen."
+
+#: BackUpWP/bkpwp-classes/options.php:75
+msgid "Directory did not exist but this script was able to create it."
+msgstr "Das Verzeichnis existierte nicht, aber das Skript hat es erstellen können."
+
+#: BackUpWP/bkpwp-classes/options.php:80
+msgid "Directory does exist but is not writable by the webserver. Check directory permissions (e.g.: chmod 777)."
+msgstr "Das Verzeichnis existiert, is aber für den Webserver nicht schreibbar."
+
+#: BackUpWP/bkpwp-classes/options.php:84
+msgid "Backup Path saved."
+msgstr "Backup Pfad gespeichert."
+
+#: BackUpWP/bkpwp-classes/options.php:84
+msgid "Continue"
+msgstr "Weiter"
+
+#: BackUpWP/bkpwp-classes/options.php:90
+msgid "Please configure the Backup path first. The field below should allready be filled with a recommendation for that option."
+msgstr "Bitte spezifizieren Sie das Backup-Verzeichnis zuerst. Das untenstehende Feld sollte bereits eine Empfehlung für das Verzeichnis beinhalten."
+
+#: BackUpWP/bkpwp-classes/options.php:112
+#: BackUpWP/bkpwp-classes/options.php:125
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#: BackUpWP/bkpwp-classes/options.php:138
+msgid "New Backup Exclude List saved:"
+msgstr "Neue Ausschlussliste gespeichert:"
+
+#: BackUpWP/bkpwp-classes/options.php:141
+msgid "Backup Exclude List saved:"
+msgstr "Backup Ausschlussliste gespeichert:"
+
+#: BackUpWP/bkpwp-classes/options.php:144
+msgid "Backup Exclude List deleted:"
+msgstr "Backup Ausschlussliste gelöscht:"
+
+#: BackUpWP/bkpwp-classes/options.php:177
+msgid "Folders"
+msgstr "Verzeichnisse"
+
+#: BackUpWP/bkpwp-classes/options.php:180
+msgid "matched by"
+msgstr "übereinstimmend mit"
+
+#: BackUpWP/bkpwp-classes/options.php:192
+msgid "Files"
+msgstr "Dateien"
+
+#: BackUpWP/bkpwp-classes/options.php:194
+msgid "files matched by"
+msgstr "Dateien übereinstimmend mit"
+
+#: BackUpWP/bkpwp-classes/options.php:412
+msgid "Full Backup Weekly"
+msgstr "Vollständiges wöchentliches Backup"
+
+#: BackUpWP/bkpwp-classes/options.php:419
+msgid "SQL Only Backup Daily"
+msgstr "tägliches SQL Backup"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:13
+msgid "BackUp Archive Path and Filename"
+msgstr "Backup Archiv Pfad und Dateiname"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:15
+msgid "BackUp Logfile"
+msgstr "Backup Log Datei"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:22
+msgid "does not exist."
+msgstr "existiert nicht"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:32
+msgid "scheduled"
+msgstr "geplant"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:41
+msgid "Line"
+msgstr "Zeile"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:44
+msgid "BackUpWordPress Logfile does not exist:"
+msgstr "BackUpWordPress Log Datei existiert nicht:"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:86
+msgid "download"
+msgstr "herunterladen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:93
+msgid "View Backup Information"
+msgstr "Backup Informationen anzeigen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:96
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:84
+msgid "view"
+msgstr "ansehen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:101
+msgid "mail"
+msgstr "mailen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:107
+msgid "restore"
+msgstr "wiederherstellen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:113
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:90
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:130
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:199
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:113
+msgid "delete"
+msgstr "löschen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:189
+msgid "Error getting table structure of "
+msgstr "Fehler beim erstellen der Tabellenstruktur von"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:206
+msgid "Error getting records of "
+msgstr "Fehler beim erstellen der Datensätze von"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:286
+msgid "Could not connect to MySQL server! "
+msgstr "Konnte den Mysql Datenbankserver nicht erreichen!"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:289
+msgid "MySQL server connected successfully "
+msgstr "MySQL Server erfolgerich verbunden"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:296
+msgid "Could not select db "
+msgstr "Konnte die Datenbank nicht auswählen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:329
+msgid "Database Only Backup with this Preset. No Disk Files will be backed up."
+msgstr "Dieses Preset unterstützt ausschliesslich das Backup der Datenbank. Es werden keine Dateien gesichert."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:345
+msgid "Your Wordpress files backuped with preset"
+msgstr "Ihre WordPress Dateien, gesichert mit dem Preset"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:345
+msgid " use"
+msgstr "verbrauchen"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:346
+msgid "of disk space."
+msgstr "Speicherplatz."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:347
+msgid "Depending on the type of these files, the resulting Backup Archive filesize can be reduced by more than 70%."
+msgstr "Abhängig von der Art der Dateien, kann das resultierende Backup-Archiv mehr als 70% weniger Speicher verbrauchen."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:384
+msgid "BackUpWordPress starting at"
+msgstr "BackUpWordPress startete um"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:389
+#: BackUpWP/bkpwp-classes/manage_backups.php:391
+#: BackUpWP/bkpwp-classes/manage_backups.php:400
+#: BackUpWP/bkpwp-classes/manage_backups.php:402
+msgid "BackUpWordPress temporary Directory"
+msgstr "BackUpWordPress temporäres Verzeichnis"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:389
+#: BackUpWP/bkpwp-classes/manage_backups.php:400
+msgid "could not be created"
+msgstr "konnte nicht angelegt werden"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:391
+#: BackUpWP/bkpwp-classes/manage_backups.php:402
+msgid "created"
+msgstr "angelegt"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:411
+msgid "SQL Dump could not be created."
+msgstr "SQL Dump konnte nicht erstellt werden."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:413
+msgid "SQL Dump created."
+msgstr "SQL Dump erstellt."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:426
+msgid "Failed to make directory"
+msgstr "Verzeichnis konnte nicht erstellt werden"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:432
+msgid "Failed to copy"
+msgstr "Kopierfehler"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:439
+msgid "Temporary Subdirectories copied sucessfully"
+msgstr "temporäre Unterverzeichnisse erfolgreich kopiert"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:440
+msgid "Temporary Files copied sucessfully"
+msgstr "temporäre Dateien erfolgreich kopiert"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:447
+msgid "Failed to create backup archive"
+msgstr "Backup Archiv konnte nicht erstellt werden"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:449
+msgid "Archive File created/compressed successfully:"
+msgstr "Archiv Datei erfolgreich erstellet/komprimiert:"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:453
+msgid "Temporary Directories and Files deleted successfully"
+msgstr "temporäre Verzeichnisse und Dateien erfolgreich gelöscht"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:456
+msgid "Old BackUpWordPress Archives deleted successfully"
+msgstr "Veraltete Backup Archive erfolgreich gelöscht"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:458
+msgid "No old BackUpWordPress Archives to delete"
+msgstr "Es gibt keine veralteten BackUpWordPress Archive zu löschen."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:464
+msgid "BackUpWordPress done at"
+msgstr "BackUpWordPress beendet am"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:465
+msgid "BackUpWordPress was running for"
+msgstr "BackUpWordPress lief für"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:465
+msgid "Seconds"
+msgstr "Sekunden"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:553
+msgid "Logfile could not be opened for writing: "
+msgstr "Lof Datei konnte nicht zum schreiben geöffnet werden:"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:557
+#: BackUpWP/bkpwp-classes/manage_backups.php:563
+msgid "Logfile not writable: "
+msgstr "Log Datei nicht schreibbar:"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:657
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:26
+msgid "Preset Name"
+msgstr "Name der Voreinstellung"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:660
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:27
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:110
+msgid "Archive Type"
+msgstr "Archiv Typus"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:679
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:28
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:112
+msgid "Exclude List"
+msgstr "Ausschlussliste"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:680
+msgid "None"
+msgstr "Keine"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:689
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:287
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:317
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:51
+msgid "Configure"
+msgstr "Konfigurieren"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:698
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:114
+msgid "SQL only"
+msgstr "nur SQL"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:699
+msgid "Save Preset"
+msgstr "Voreinstellung speichern"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:699
+msgid "Saving Preset"
+msgstr "Voreinstellung wird gespeichert"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:701
+#: BackUpWP/bkpwp-classes/manage_backups.php:749
+msgid "You can not overwrite this default preset. Please save changes with a new Preset Name."
+msgstr "Dieses Preset kann nicht überschrieben werden. Bitte wählen Sie einen anderen Namen für die Voreinstellung."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:712
+msgid "Omitted Folders and Files when using"
+msgstr "Verzeichnisse und Dateien, die übersprungen werden mit "
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:730
+msgid "You can not delete this default preset."
+msgstr "Diese Voreinstellung kann nciht geläscht werden."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:735
+msgid "Preset deleted."
+msgstr "Voreinstellung gelöscht."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:768
+msgid "Preset saved."
+msgstr "Voreinstellung gespeichert."
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:862
+msgid "Your requested Backup"
+msgstr "Ihr gewünschtes Backup"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:864
+msgid "This Backup exceeded"
+msgstr "Dieses Backup überschreitet"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:864
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:102
+msgid "MB (megabytes)"
+msgstr "MB (megabytes)"
+
+#: BackUpWP/bkpwp-classes/manage_backups.php:865
+msgid "Please download it from your WordPress administration backend."
+msgstr "Bitte laden SIe es aus dem WordPress Administrations Backend herunter."
+
+#: BackUpWP/bkpwp-pages/bkpwp_footer.php:3
+#: BackUpWP/bkpwp-pages/bkpwp_mail_footer.php:3
+msgid "Running into Troubles? Features to suggest?"
+msgstr "Haben Sie Schwierigkeiten mit dem Plugin? Haben Sie Verbesserungsvorschläge?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_footer.php:5
+#: BackUpWP/bkpwp-pages/bkpwp_mail_footer.php:4
+msgid "Drop me a line"
+msgstr "Schreiben Sie mir"
+
+#: BackUpWP/bkpwp-pages/bkpwp_footer.php:10
+msgid "Do you like this Plugin?"
+msgstr "Finden Sie dieses Plugin nützlich?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_footer.php:11
+msgid "Consider to"
+msgstr "unterstützen Sie unsere Arbeit"
+
+#: BackUpWP/bkpwp-pages/bkpwp_mail_footer.php:1
+msgid "Are you happy with this plugin? Looking for more plugins?"
+msgstr "Sind sie zufrieden mit diesem Plugin? Suchen sie andere Plugins?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_mail_footer.php:2
+msgid "Visit my site and consider to donate"
+msgstr "Besuchen Sie meine Seite und unterstützen Sie unsere Arbeit"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:29
+msgid "SQL/Full"
+msgstr "SQL/Vollständig"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:30
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:338
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:29
+msgid "Action"
+msgstr "Aktionen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:75
+msgid "edit"
+msgstr "ändern"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:92
+msgid "default"
+msgstr "voreingestellt"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_presets.php:145
+msgid "To create a new backup preset, edit one of the defaults and save with a new preset name."
+msgstr "Um eine neue Backup Voreinstellung anzulegen, ändern SIe einfach eine der bestehenden und speichern Sie sie unter neuem Namen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:12
+msgid "For this version of BackUpWordPress it is only possible to restore the database itself."
+msgstr "Diese Version von BackUpWordPress ermöglicht leider nur das wiederherstellen der Datenbank."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:14
+msgid "For restoring uploaded Files, Plugins etc. we recommend downloading this archive and upload the respective files to your WordPress installations via FTP."
+msgstr "Wenn Sie Upload-Dateien, Plugins, etc. wiederherstellen möchten, empfehlen wir, das Backup-Archiv herunterzuladen und die Dateien via FTP auf den Server zu transferieren."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:16
+msgid "You are going to restore your database from the following archive now:"
+msgstr "Sie werden nun Ihre Datenbank aus folgendem Archiv wiederherstellen:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:17
+msgid "If you proceed, you will leave your WordPress Admin Area and enter the bigdump utility, where your entire database is beeing restored."
+msgstr "Wenn Sie fortfahren, wird das Werkzeug bigdump gestartet, welches Ihre Datenbank wiederherstellt."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:27
+msgid "Restore the Database"
+msgstr "Datenbank wiederherstellen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:31
+msgid "Download the Backup Archive for Files Recovery"
+msgstr "Backup Archiv herunterladen, um die Dateien wiederherstellen zu können"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:61
+msgid "cannot be opened from"
+msgstr "konnte nicht geöffnet werden von"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:64
+msgid "cannot be written to"
+msgstr "konnte nicht geschrieben werden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:75
+msgid "Please do not reload the page until bigdump has done its job!"
+msgstr "Bitte landen Sie diese Seite nicht neu, bis bigdump seine Arbeit erledigt hat!"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:84
+msgid "Some Errors occured while restoring from backup archive"
+msgstr "Einige Fehler sind beim wiederherstellen des Backup Archivs passiert"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:97
+msgid "Backup file restored sucessfully from archive: "
+msgstr "Backup Datei erfolgreoch aus folgendem Archiv wiederhergestellt:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:108
+msgid "Recovery ERROR"
+msgstr "Wiederherstellungsfehler."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:110
+msgid "Backup Archive could not be read."
+msgstr "Backup Archiv konnte nicht gelesen werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:122
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:202
+msgid "Do you want to delete the backup archive"
+msgstr "Soll das Backup Archiv gelöscht werden?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:144
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:222
+msgid "Backup file deleted sucessfully"
+msgstr "Backup Archiv erfolgreich gelöscht"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:155
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:233
+msgid "Backup file deletion failed"
+msgstr "Backup Datei konnte nicht gelöscht werden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:176
+msgid "The BackUp Archive File you want to send is"
+msgstr "Die Backup Datei, die verschickt werden soll ist"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:176
+msgid "large"
+msgstr "groß"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:177
+msgid "Do you really want to send this file by email?"
+msgstr "Soll SIe wirklich per Email versendet werden?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:185
+msgid "send"
+msgstr "Senden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:202
+msgid "Backup has been sent"
+msgstr "Backup gesendet"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:213
+msgid "Error sending Backup by mail"
+msgstr "Fehler beim versenden der Backup Datei."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:229
+msgid "No Backups yet"
+msgstr "keine Backups vorhanden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:232
+msgid "Start by configuring the Options"
+msgstr "Beginnen Sie damit, die Konfigurationsoptionen einzustellen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:248
+msgid "Creating backup. Please wait."
+msgstr "Backup wird erstellt. Bitte warten."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:280
+msgid "Select a Preset."
+msgstr "bitte eine Voreinstellung auswählen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:291
+msgid "BackUp WordPress Now"
+msgstr "BackUpWordPress Jetzt"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:293
+msgid "Calculating used disk space"
+msgstr "Speicherverbrauch wird gemessen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:293
+msgid "Recalculate Used Disk Space"
+msgstr "Speicherverbrauch wird nochmals gemessen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:314
+msgid "Your configuration is set to a maximum of"
+msgstr "Ihre Konfiguration ist eingestellt auf ein Maximum von"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:316
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:323
+msgid "Backups."
+msgstr "Backups."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:321
+msgid "displaying the last"
+msgstr "es werden die letzten angezeigt"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:325
+msgid "Backups at all."
+msgstr "Backups vorhanden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:326
+msgid "Show all"
+msgstr "Alle anzeigen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:332
+msgid "Date/Time"
+msgstr "Datum/Uhrzeit"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:334
+msgid "Type"
+msgstr "Typ"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:335
+msgid "Preset"
+msgstr "Voreinstellung"
+
+#: BackUpWP/bkpwp-pages/bkpwp_manage_backups.php:337
+msgid "Size"
+msgstr "Größe"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:14
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:156
+msgid "Schedule activity status set to"
+msgstr "Zeitplan Status gesetzt auf"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:17
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:159
+msgid "active"
+msgstr "aktiv"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:19
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:161
+msgid "inactive"
+msgstr "inaktiv"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:23
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:165
+msgid "Schedule activity status could not be set"
+msgstr "Zeitplan Status konnte nicht gesetzt werden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:32
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:38
+msgid "You are running BackUpWordPress in "
+msgstr "Sie verwenden BackUpWordPress im"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:34
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:40
+msgid "Configuration options below"
+msgstr "Konfigurationsoptionen untenstehend"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:35
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:183
+msgid "For more options, please swith to "
+msgstr "Für mehr Optionen, wechseln Sie bitte in den"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:41
+msgid "For less options, please swith to "
+msgstr "Für weniger Optionen wechseln SIe bitte in den"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:47
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:174
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:191
+msgid "Backup Path"
+msgstr "Backup Pfad"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:49
+msgid "This is where all your backups go"
+msgstr "Hier werden Ihre Backups gespeichert"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:54
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:103
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:125
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:199
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:209
+msgid "save"
+msgstr "speichern"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:63
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:176
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:193
+msgid "Basic Scheduling"
+msgstr "Einfacher Zeitplan"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:65
+msgid "Do you want BackUpWordPress to be scheduled and run automatically?"
+msgstr "Möchten Sie, dass BackUpWordPress nach einem Zeitplan automatische Backups anfertigt?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:74
+msgid "Backup Type"
+msgstr "Backup Art"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:76
+msgid "is not activated"
+msgstr "ist nicht aktiviert"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:76
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:97
+msgid "activate"
+msgstr "aktiviert"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:78
+msgid "is currently set to active"
+msgstr "ist momentan aktiviert"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:78
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:99
+msgid "deactivate"
+msgstr "deaktivieren"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:91
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:178
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:195
+msgid "Mail Setup"
+msgstr "Email Einstellungen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:93
+msgid "Do you want to receive your backups automatically by email?"
+msgstr "Möchten Sie Backups automatisch per email erhalten?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:97
+msgid "Mail to:"
+msgstr "Email an:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:99
+msgid "Yes, send me my backups"
+msgstr "Ja, ich möchte Backups per email erhalten"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:100
+msgid "as long as they are smaller than"
+msgstr "wenn SIe kleiner sind als"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:115
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:197
+msgid "Backup Storage"
+msgstr "Backup Speicher"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:117
+msgid "How many Backups do you want to keep?"
+msgstr "Wie viele Backups sollen gespeichert werden?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:121
+msgid "maximum Backups"
+msgstr "maximal Backups"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:132
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:199
+msgid "Exclude Lists"
+msgstr "Ausschlusslisten"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:150
+msgid "Files &amp; Folders that will NOT (!) be included in the Backup when using "
+msgstr "Dateien &amp; Verzeichnisse, die NICHT(!) im Backup enthalten sein weden, wenn"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:167
+msgid "Edit an existing Exclude List"
+msgstr "eine bestehende Ausschlussliste ändern"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:169
+msgid "Please select"
+msgstr "Bitte auswählen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:184
+msgid "Exclude List Name"
+msgstr "Name der Ausschlussliste"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:189
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:208
+msgid "Files to exclude"
+msgstr "Dateien, die ausgeschlossen werden"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:201
+msgid "this is a Default Exclude List"
+msgstr "Dies ist eine voreingestellte Ausschlussliste"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:203
+msgid "Show excluded files"
+msgstr "ausgeschlossenen Dateien anzeigen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:206
+msgid "New Exclude List"
+msgstr "Neue Ausschlussliste"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:207
+msgid "Name"
+msgstr "Name"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:213
+msgid "enter an <b>absolute or relative path</b> to your folders/ files not to backup"
+msgstr "geben Sie einen <b>absoluten oder relativen</b> Pfad zu ihren Verzeichnissen /Dateien an, die nicht gesichert werden sollen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:214
+msgid "or <b>just names or file-extensions (.php, .txt) which should match files</b>"
+msgstr "oder geben Sie <b>nur Namen oder Dateiendungen (.php,.txt)</b> an, welceh zu den ausgeschlossenen Dateien passen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:215
+msgid "no need to take care of the <b>backup folder</b>, it <b>will be excluded anyways"
+msgstr "Das Backup-Verzeichnis selbst ist bereits berücksichtigt."
+
+#: BackUpWP/bkpwp-pages/bkpwp_options.php:216
+msgid "Seperate with commas."
+msgstr "Mit Kommas getrennt eingeben."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:6
+msgid "Info: Creating custom schedules is on the wishlist for BackUpWordPress 2.0."
+msgstr "Information: Eigene Zeitpläne zu erstellen ist auf der Wunschliste für die nächste Version von BackUpWordPress"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:10
+msgid "reset default schedules"
+msgstr "voreingestellte Zeipläne wiederherstellen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:11
+msgid "test schedules"
+msgstr "Zeitplan testen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:24
+msgid "Last run"
+msgstr "letzter Lauf"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:25
+msgid "Next run"
+msgstr "nächster Lauf"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:26
+msgid "Countdown"
+msgstr "Countdown"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:27
+msgid "Backup Preset"
+msgstr "Backup Voreinstellung"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:28
+msgid "Reccurrence"
+msgstr "Wiederholung"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:45
+msgid "Not Yet"
+msgstr "noch nicht"
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:77
+msgid "Backup inactive."
+msgstr "Backup ist inaktiv."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:79
+msgid "Backup done."
+msgstr "Backup erstellt."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:141
+msgid "Schedule deleted."
+msgstr "Zeitplan gelöscht."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:143
+msgid "Schedule could not be deleted."
+msgstr "Zeitplan konnte nicht gelöscht werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:178
+msgid "Schedules reset to defaults. Please be patient, scheduling may take a few seconds to show up in the list below."
+msgstr "Zeitpläne sind auf die Voreinstellung zurückgesetzt worden. Bitte etwas Geduld, es kann ein paar Sekunden dauern, bis die Einträge in der Liste wieder aufscheinen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:188
+msgid ""
+"A schedule without reccurrence for one single Database Backup has been set up \n"
+"\t\t\tand should execute with the first hit your Blog receives after 30 Seconds from now."
+msgstr ""
+"Ein Zeitplan ohne Wiederholung für ein einzelnes Datenbankbackup ist erstellt woedern \n"
+"\t\t\tund sollte mit dem ersten hit auf Ihre Webseite innerhalb von 30 Sekunden durchgeführt werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:191
+msgid "Testing schedules failed."
+msgstr "Testzeitplan fehlerhaft."
+
+#: BackUpWP/bkpwp-pages/bkpwp_schedule.php:209
+msgid "go on, delete"
+msgstr "weiter, löschen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:6
+msgid "BackUpWordPress Help"
+msgstr "BackUpWordPress Hilfe"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:15
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:105
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:143
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:188
+msgid "Help Index"
+msgstr "Hile Index"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:18
+msgid ""
+"BackUpWordPress creates backup archives within a backup repository. \n"
+"\t\t\t\tIt saves all your WordPress files as well as your Database for recovery purposes."
+msgstr "BackUpWordPress erstellt Backup Archive in einem Backup Verzeichnis. BackUpWordPress speichert sowohl Datenbank als auch Dateien zum Zweck einer Wiederherstellung."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:24
+msgid "BackUpWordPress keeps a number of"
+msgstr "BackUpWordPress speichert "
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:26
+msgid "backup archives in the backup repository."
+msgstr "Backup Archive im Backup Verzeichnis."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:28
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:54
+msgid ""
+"As soon as this amount of backup archives in the repository is reached, \n"
+"\t\t\t\tevery next backup will cause the oldest backup archive to be deleted."
+msgstr "Sobald diese Anzahl an Backup Archiven erreicht ist, wird das jeweils älteste Archiv gelöscht."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:33
+msgid "There are two ways of doing backups:"
+msgstr "Es gibt zwei Methoden, Backup Archive zu erstellen:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:35
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:61
+msgid "You can run BackUpWordPress manually by hitting the \"BackUpWordPress Now\" button."
+msgstr "BackUpWordPress kann manuell Ausgeführt werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:36
+msgid "This will create a full backup of your WordPress installation. Depending on the amount and size of your files it might take a while."
+msgstr "Dies erstellt ein vollständiges Backup Ihrer WordPress Installation. Abhängig von der Menge und der Größe der Dateien, kann das eine ganze Weile dauern."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:37
+msgid "You can download your backups for archiving purposes"
+msgstr "Sie können die Backups zu Archivierungszwecken vom Server laden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:38
+msgid "You can restore your database and/or files"
+msgstr "Sie können die Datenbank und/oder Dateien wiederherstellen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:42
+msgid "For more information, please swith to "
+msgstr "Für mehr Information wechseln Sie bitte in den"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:48
+msgid "By default, BackUpWordPress keeps a number of"
+msgstr "Voreingestellt behält BackUpWordPress"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:50
+msgid "backup archives in the backup repository. You can alter this number within the Advanced Backup Settings. "
+msgstr "Backup Archive im Backup Verzeichnis. Diese Zahl kann in den Konfigurationseinstellungen geändert werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:59
+msgid "Basically, there are two ways of doing backups:"
+msgstr "Grundsätzlich gibt es zwei Möglichkeiten, Backups zu erstellen:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:62
+msgid "You can activate scheduling, which will run weekly backups of your databse and monthly backups of your WordPress installations directory and file structure automatically."
+msgstr "Sie können Zeitpläne aktivieren, die tägliche Backups der Datenbank und wöchentliche Backups der Dateistrukur automatisch erstellen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:66
+msgid ""
+"Both methods allow you to use Presets. \n"
+"\t\t\t\tBackUpWordPress comes preconfigured with two Presets. \n"
+"\t\t\t\tOne for a Database-only Backup, the other for a full backup including your WordPress file structure.\n"
+"\t\t\t\tBackUpWordPress makes use of these two Presets when running in EasyMode."
+msgstr "Beide Methoden verwenden Voreinstellungen. BackUpWordPress verfügt über zwei voreingestellte Voreinstellungen. Eines um reine Datenbank Backups zu erstellen und eines, um ein vollständiges Backup der WordPress Installation zu erstellen. Diese Voreinstellungen werden auch im EasyMode eingesetzt."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:73
+msgid "What can you do with your BackUpWordPress backup archives?"
+msgstr "Was können SIe mit Ihren Backup Archiven machen?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:75
+msgid "You can download BackUpWordPress archives"
+msgstr "Sie können die Archiv Dateien vom Server herunterladen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:76
+msgid ""
+"For security reasons, not all of your WordPress files and directories are writeable by the webserver.\n"
+"\t\t\t\t\tTherefore, for a full recovery, you might have to unpack a downloaded backup archive and upload the containig files via FTP, \n"
+"\t\t\t\t\tjust as you did when installing WordPress for the first time. Overwriting existing files on the webserver will set your \n"
+"\t\t\t\t\tWordpress installation back to the state when your backup archive was saved."
+msgstr "Aus Sicherheitsgründen sind nicht alle Ihre Datein und Verzeichnisse für den Webserver schreibbar. Um eine WordPRess installation vollständig wiederherzustellen müssen Sie womöglich ein Backup-Archiv lokal entpacken und die Dateien per FTP wieder auf den Server laden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:80
+msgid "\"view\" gives you extended information about the archive file and Backup Process (Log)."
+msgstr "\"anzeigen\" zeigt ausführliche Informationen über das Backup-Archiv und seinen Erstellungsprozess (Log) an."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:81
+msgid "You can send yourself an email containing Backup Archive Files."
+msgstr "Sie können an sich selbst eine email mit dem Backup-Archiv senden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:82
+msgid "You can restore your WordPress Blog or parts of it."
+msgstr "Sie können ihre Webseite odr Teile davon aus einem Backup Archiv wiederherstellen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:83
+msgid "And you can simply delete unused Backup archive files."
+msgstr "Und Sie können nicht mehr benötigter Backup-Dateien einfach von Server löschen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:85
+msgid ""
+"Is your Wordpress installation getting really big?\n"
+"\t\t\t\tDoes your wp-content/uploads directory hold a huge amount of Files?"
+msgstr "Wird Ihre WordPress installation langsam zu groß? Sind relativ viele Dateien unter wp-content/Uploads vorhanden?"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:89
+msgid ""
+"Consider hitting the \"Recalculate Used Disk Space\" button! \n"
+"\t\t\tThis way you can estimate how long BackUpWordPress will run and how big the resulting backup archive file will be."
+msgstr "Dann können Sie eine Berechnung des verbrauchten Speicherplatzes durchführen und anhand dessen kalkulieren, wieviel Speicherplatz das resultierende Backup-Archiv verbrauchen wird."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:93
+msgid "This plugin my give you a better overview:"
+msgstr "Dieses Plugin könnte da vielleicht auch nützlich sein."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:108
+msgid "BackUpWordPress Presets consist of a handful of options:"
+msgstr "BackUpWordPress Voreinstellungen bestehen aus einer handvoll Optionen:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:111
+msgid "Sets the archive file type and compression."
+msgstr "Setzt Archiv Dateityp und Komprimierung."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:113
+msgid "Exclude Lists can be configured seperately."
+msgstr "Ausschlusslisten können separat konfiguriert werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:115
+msgid "Database backup. Files and Folders (and thus Exclude Lists) are ignored."
+msgstr "Datenbank Backup. Dateien ud Verzeichnisse (und daher auch Ausschlusslisten) werden ignoriert."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:119
+msgid ""
+"At install, BackUpWordPress checks for available compression types available on your webserver.\n"
+"\t\t\t\tIf you are missing archiv file types there, contact your webserver's admin."
+msgstr "Bei der Aktivierung von BackUpWordPress, wird überprüft, welche Komprimierungsmethoden zur Verfügung stehen. Sollten Sie Archiv-Typen hier vermissen, wenden SIe sich bitte an Ihren Systemadministrator."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:123
+msgid ""
+"Note: .tgz, .tar and .tar.gz archive file types store Unix file and directory Permissions. \n"
+"\t\t\t\tIf your WordPress installation is hosted on a *nix system and you need resulting BackUpWodPress archives\n"
+"\t\t\t\tfor recovering purposes ther or want to migrate to another *nix host, .zip is not an option."
+msgstr "Beachten Sie: .tgz, .tar und .tar,gz Archiv Typen speichern auch die Datei und Verzeichnisberechtigungen. Wenn Ihre WordPress instelletion auf eine *nix Sysem gehostet wird, ist .zip keinen empfohlene Einstellung."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:128
+msgid "You cannot delete default Presets, but you can alter them and save with a new Preset name."
+msgstr "Voreingestellte Voreinstellungen können nicht gelöscht weden, aber sie können geändert und unter einem neuen Namen gespeichert werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:131
+msgid "The \"view\" action will give you a preview on what will be backed up with this preset."
+msgstr "\"Anzeigen\" ergibt eine Ansicht von Dateien, welche Dateien mit dieser Voreinstellung gesichert werden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:135
+msgid "Satisfied with Defaults? Consider switching to "
+msgstr "Die VOreinstellungen genügen Ihnen vollauf? Wechseln Sie in den"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:146
+msgid "BackUpWordPress Schedules gives you the following options:"
+msgstr "BackUpWordPress Zeitpläne haben folgende Optionen:"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:148
+msgid "Reset Default Schedules"
+msgstr "voreingestellte Zeitpläne wiederherstellen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:149
+msgid "Resets all schedules to default."
+msgstr "Stellt die Voreinstellungen für die Zeitpläne wieder her"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:150
+msgid "Test Schedules"
+msgstr "Zeitpläne testen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:151
+msgid "You can set a single shedule without recurrence doing a SQL-only Backup just to test Scheduling."
+msgstr "Hier können Sie einen einzelnen Zeioplan ohne Wiederholung erstellen, wlecher ein Datenbankbackup ausführt."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:152
+msgid "Activate/Deactivate Schedules"
+msgstr "Zeitplänen aktivieren/deaktivieren"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:153
+msgid "Activation status can be set on any Schedule."
+msgstr "Dieser Status kann für jeden Zeitplan gesetzt weden."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:154
+msgid "Delete Schedules"
+msgstr "Zeitpläne löschen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:158
+msgid "Note for WordPress plugin developers: Try and analyze"
+msgstr "Info für WordPress Entwickler: Probieren und analysiern Sie"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:158
+msgid "Cron Developers Demo is a plugin created for the sole purpose of demonstrationg the pseudo-cron feature built into WordPress"
+msgstr "Cron Developer Demo ist zu dem alleinigen Zweck kreiert worden, um das WordPress eigene pseudo-Cron Feature zu demonstrieren."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:162
+msgid "Satisfied with default Schedules? Consider switching to "
+msgstr "Sie sind mit den voreingestellen Zeitplänen zufrieden? Wechseln Sie in den"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:169
+msgid "BackUpWordPress Settings"
+msgstr "BackUpWordPress Einstellungen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:175
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:192
+msgid "Set the directory where your backups will be stored."
+msgstr "Setzten Sie das Verzeichnis, in dem Ihre Backups gespeichert werden sollen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:177
+msgid "Turn scheduled Backups on or off."
+msgstr "Zeitpläne aktivieren und deaktivieren."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:179
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:196
+msgid "Activate or deactivate Backup email notification."
+msgstr "Email-Benachrichtigung bei neu erstellen Backups aktivieren und deaktivieren."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:194
+msgid "is a shortcut for scheduling defaults."
+msgstr "ist eine Abkürzung zu den Zeitplan Voreinstellungen"
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:198
+msgid "Set the number of Backups to keep."
+msgstr "Setzen Sie die Anzahl der Backups die gespeichert bleiben sollen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:200
+msgid "Configure Exclude Lists for use with your presets."
+msgstr "Konfigurieren Sie eigene Ausschlusslisten zur Verwendung mit Ihren Voreinstellungen."
+
+#: BackUpWP/bkpwp-pages/bkpwp_help.php:204
+msgid "Too many Settings? Consider switching to "
+msgstr "Zu viele Optionen? Wechseln Sie in den"
+

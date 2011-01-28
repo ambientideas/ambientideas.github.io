@@ -1,16 +1,16 @@
 === SyntaxHighlighter Evolved ===
-Contributors: Viper007Bond, Automattic
+Contributors: Viper007Bond, automattic
 Donate link: http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/donate/
-Tags: code, sourcecode, php, xhtml, html, css
+Tags: code, sourcecode, php, xhtml, html, css, WordPress.com
 Requires at least: 2.7
-Tested up to: 2.9
+Tested up to: 3.1
 Stable tag: trunk
 
 Easily post syntax-highlighted code to your site without having to modify the code at all. As seen on WordPress.com.
 
 == Description ==
 
-SyntaxHighlighter Evolved allows you to easily post syntax-highlighted code to your site without loosing it's formatting or making any manual changes. It uses the [SyntaxHighlighter JavaScript package by Alex Gorbatchev](http://alexgorbatchev.com/wiki/SyntaxHighlighter).
+SyntaxHighlighter Evolved allows you to easily post syntax-highlighted code to your site without losing it's formatting or making any manual changes. It uses the [SyntaxHighlighter JavaScript package by Alex Gorbatchev](http://alexgorbatchev.com/wiki/SyntaxHighlighter).
 
 For a live demo, see [this plugin's homepage](http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/).
 
@@ -55,6 +55,31 @@ Make sure your theme's `footer.php` file has `<?php wp_footer(); ?>` somewhere i
 
 == ChangeLog ==
 
+= Version 3.1.1 =
+
+* Fix default title setting not working.
+* Force `<code>` to be inline. Fixes issues with themes that do `code { display: block; }`.
+* Added Japanese translation thanks to [Makoto](http://projects.makotokw.com/redmine/projects/wp-plugins/wiki/Translation).
+
+= Version 3.1.0 =
+
+* Allow choosing between v2.x and v3.x of the SyntaxHighlighting package. Some people prefer the old one and there's nothing wrong with it really.
+* Fix broken TinyMCE plugin URL.
+* Force LTR text in v3.x.
+* If global collapse default is on, force on the toolbar and force off light mode to avoid the code block from disappearing.
+* Make the demo on the settings page the width of the content area on the front end so it's a better example of what the code will look like.
+* Bring back v2.x specific settings like `linewrap`.
+
+= Version 3.0.0 =
+
+* Updated to SyntaxHighlighter v3.0.83. See [changes](http://alexgorbatchev.com/SyntaxHighlighter/whatsnew.html). Main highlight is the ability to directly copy the code or double-click it to highlight it all.
+* Allow specifying a line highlight range in the format of `5-10` (will highlight lines 5 through 10). Idea thanks to someone who's name I forgot. :(
+* BuddyPress support! Props [Rich](http://blog.etiviti.com/).
+* Add third-party Clojure brush by [Travis Whitton](http://travis-whitton.blogspot.com/2009/06/syntaxhighlighter-for-clojure.html).
+* Add third-party R language brush by [Yihui Xie](http://yihui.name/en/2010/09/syntaxhighlighter-brush-for-the-r-language).
+* Ukrainian transation update thanks to [AzzePis](http://wordpress.co.ua/).
+* An updated Italian transation thanks to [gidibao](http://gidibao.net/).
+
 = Version 2.3.8 =
 
 * Disable `[latex]` to avoid collisions with LaTeX rendering plugins. Use `[tex]` instead if you want to post LaTeX source.
@@ -65,15 +90,15 @@ Make sure your theme's `footer.php` file has `<?php wp_footer(); ?>` somewhere i
 
 = Version 2.3.6 =
 
-* Add F-Sharp brush by [Steve Gilham](http://stevegilham.blogspot.com/2009/10/syntaxhighlighter-20-brushes-for-f-and.html).
-* Add MATLAB brush by [Will Schleter](http://ef.engr.utk.edu/matlab/syntaxhighlighter/) (only highlights popular keywords to avoid browser lockups).
+* Add third-party F-Sharp brush by [Steve Gilham](http://stevegilham.blogspot.com/2009/10/syntaxhighlighter-20-brushes-for-f-and.html).
+* Add third-partyMATLAB brush by [Will Schleter](http://ef.engr.utk.edu/matlab/syntaxhighlighter/) (only highlights popular keywords to avoid browser lockups).
 * Prevent double-encoding of shortcode contents save. I still have no idea why the `content_save_pre` filter is sometimes run twice.
 
 = Version 2.3.5 =
 
 * Move third-party brushes to their own folder to make it easier to keep track of them.
 * Fix broken Objective-C brush. Props Yoav.
-* Add LaTeX brush. This won't render LaTex, it will merely allow you to post LaTeX souce. Props [Jorge Martinez de Salinas](http://www.jorgemarsal.com/blog/2009/06/13/latex-brush-for-syntax-highlighter-plus-wordpress-plugin/).
+* Add third-party LaTeX brush. This won't render LaTex, it will merely allow you to post LaTeX souce. Props [Jorge Martinez de Salinas](http://www.jorgemarsal.com/blog/2009/06/13/latex-brush-for-syntax-highlighter-plus-wordpress-plugin/).
 
 = Version 2.3.4 =
 

@@ -131,7 +131,7 @@ body {
 	background-image: url("/images/layout/body-bg.jpg");
 	background-repeat: repeat-x;
 	
-	width: 850px;
+	width: 95%; /*850px;*/
 	
 	margin: 0 auto 0 auto;
 	
@@ -277,8 +277,8 @@ h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar
 	}
 
 #sidebar {
-	padding-top:105px;
-	width:275px;
+	padding-top:67px;
+	width: 23%; /*275px;*/
 	
 	
 
@@ -415,9 +415,9 @@ body {
 .narrowcolumn {
 	float: left;
 	/*padding: 0 16px 0 20px 0;*/
-	padding-right:35px !important;
+	padding-right: 1%!important;
 	margin: 0px 0 0 0;
-	width: 510px;
+	width: 75%; /*510px;*/
 	
 	background:url(/images/layout/divider-vertical.png);
 	background-position: center right;
