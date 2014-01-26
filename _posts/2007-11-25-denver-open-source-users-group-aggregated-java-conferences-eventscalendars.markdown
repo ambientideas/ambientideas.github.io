@@ -1,0 +1,20 @@
+---
+layout: post
+status: publish
+published: true
+title: |-
+  Denver Open Source Users Group: Aggregated Java Conferences, Events
+  Calendars
+author: Matthew McCullough
+author_login: admin
+author_email: sales@ambientideas.com
+author_url: http://www.ambientideas.com
+wordpress_id: 54
+wordpress_url: http://ambientideas.com/blog/index.php/2007/11/denver-open-source-users-group-aggregated-java-conferences-eventscalendars/
+date: 2007-11-25 19:23:00.000000000 -07:00
+categories:
+- Programming
+tags: []
+comments: []
+---
+Denver Open Source User Group Members,<div><br class="webkit-block-placeholder"></div><div>Several folks, including Jay Zimmerman, have recently mentioned that <span class="Apple-style-span" style="text-decoration: underline;">someone</span> should put together an aggregated calendar of Java events on both the local (Denver) and International level. &nbsp;Well, I've taken the time this weekend to make a first stab at both.<br><div><br class="webkit-block-placeholder"></div><div>I've just published two webcal calendars (works with Outlook, Mac iCal, many other client apps) that will aid all of us in expanding our exposure to programming related events.</div><div><br class="webkit-block-placeholder"></div><div><br class="webkit-block-placeholder"></div><div>The first calendar is for <b style="">Java Conferences on the National and International level</b>, and can be added to Outlook or iCal via:</div><div><a href="webcal://icalx.com/public/programr/Java%20Conferences%20&amp;%20Speaking%20Events.ics">webcal://icalx.com/public/programr/Java%20Conferences%20&amp;%20Speaking%20Events.ics</a></div><div>and has an awesome web-viewer as well:</div><div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font: normal normal normal 12px/normal Helvetica; "><a href="http://www.icalx.com/html/programr/year.php?cal=Java+Conferences+%26+Speaking+Events&amp;getdate=20071125">http://www.icalx.com/html/programr/year.php?cal=Java+Conferences+%26+Speaking+Events&amp;getdate=20071125</a></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font: normal normal normal 12px/normal Helvetica; "><br class="webkit-block-placeholder"></div></div><div>and the second is for <b>Denver and Front Range Java-related events</b>:</div><div><a href="webcal://icalx.com/public/programr/Denver%20Developer%20Events.ics">webcal://icalx.com/public/programr/Denver%20Developer%20Events.ics</a></div><div><div>and also has a web-viewer:</div><div></div></div><div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font: normal normal normal 12px/normal Helvetica; "><a href="http://www.icalx.com/html/programr/year.php?cal=Denver+Developer+Events&amp;getdate=20071125">http://www.icalx.com/html/programr/year.php?cal=Denver+Developer+Events&amp;getdate=20071125</a></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font: normal normal normal 12px/normal Helvetica; "><br class="webkit-block-placeholder"></div></div><div><br class="webkit-block-placeholder"></div><div>If you notice any discrepancies, please let me know right away and I'll correct them for the benefit of all. &nbsp;If you also see any events that should be added, send those my way.</div><div><br class="webkit-block-placeholder"></div><div>I will also be posting these links for future reference at the DOSUG web site:</div><div><font class="Apple-style-span" color="#144FAE"><span class="Apple-style-span" style="text-decoration: underline;"><a href="http://www.denveropensource.org/presenterresources">http://www.denveropensource.org/presenterresources</a></span></font></div><div><br class="webkit-block-placeholder"></div><div>Comments, feedback, and corrections welcome. &nbsp;Send them to&nbsp;<a href="mailto:matthewm@ambientideas.com">matthewm@ambientideas.com</a>.</div><div><br></div><div><div>Sincerely,</div><div>Matthew McCullough</div><div>Managing Partner</div><div>Ambient Ideas, LLC</div><div><a href="http://www.ambientideas.com">http://www.ambientideas.com</a></div></div></div><br />

@@ -1,0 +1,25 @@
+---
+layout: post
+status: publish
+published: true
+title: OSCON gets Git
+author: Matthew McCullough
+author_login: admin
+author_email: sales@ambientideas.com
+author_url: http://www.ambientideas.com
+excerpt: OSCON gets a dose of Git and PPAP
+wordpress_id: 306
+wordpress_url: http://ambientideas.com/blog/?p=306
+date: 2011-06-01 19:18:01.000000000 -06:00
+categories:
+- Programming
+tags:
+- Git
+- conferences
+- presentation
+- ppap
+comments: []
+---
+<p><a href="http://www.oscon.com/"><img src="http://ambientideas.com/blog/wp-content/uploads/2011/06/oscon2011.gif" alt="OSCON 2011" title="oscon2011.gif" border="0" width="151" height="151" style="float:right;padding: 1em; /></a>I'm honored to have been accepted to co-present a <a href="http://github.com/training/online">Git workshop</a> with <a href="http://www.augusttechgroup.com/">Tim Berglund</a> at <a href="http://www.oscon.com/">OSCON 2011</a>. It'll be my first time at OSCON, and being the <a href="http://meetup.denveropensource.org">open source advocate</a> that I am, I'm nothing short of thrilled to sit and attend a few sessions as well. I'll be joined by some of my esteemed <a href="http://nofluffjuststuff.com">No Fluff Just Stuff</a> compatriots such as <a href="http://www.thirstyhead.com/">Scott Davis</a> and <a href="http://www.evolutionnext.com/">Daniel Hinojosa</a>, amongst several others. If you are on the fence about attending, check out this <a href="http://lanyrd.com/2011/oscon-java/">partial speaker list</a>, let the awesomeness settle in, and then <a href="https://en.oreilly.com/oscon2011/public/register">book your ticket</a>.</p>
+
+<p>Oh, and last, but not least, our <a href="http://presentationpatterns.com">Presentation Patterns</a> talk (with the venerable <a href="https://nealford.com">Neal Ford</a> and well-known <a href="http://ntschutta.com/">Nate Schutta</a>) was also accepted as a talk at OSCON. Double win!</p>
