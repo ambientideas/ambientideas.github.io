@@ -1,9 +1,317 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+	<head profile="http://gmpg.org/xfn/11">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			Ambient Ideas Blog
+		</title>
+		<link rel="stylesheet" href="http://ambientideas.com/blog/wp-content/themes/ai-custom/style.css" type="text/css" media="screen" />
+		<link rel='index' title='Denver Dev Blog' href='http://ambientideas.com/blog/' />
+		<style type='text/css'>
+		#header { background: url('http://ambientideas.com/blog/wp-content/themes/ai-custom/images/header-img.php?upper=05509e&lower=c0d3e6') no-repeat bottom center; }
+		</style>
+	</head>
+	<body>
+		<div class="top"></div>
+		<div class="banner">
+			<div class="wrapper">
+				<div class="panelLeft">
+					<div class="logo"></div>
+					<div class="title">
+						<h1>
+							<a href="http://ambientideas.com/blog/">Denver Dev Blog</a>
+						</h1>
+						<h2>
+							Matthew McCullough's insights on software development as co-founder of Ambient Ideas, LLC
+						</h2>
+					</div>
+				</div>
+				<div class="panelRight">
+					<div class="decoration"></div>
+				</div>
+			</div>
+		</div>
+		<div id="page">
+			<div id="content" class="narrowcolumn">
+				<h2>
+					<a href="{{%20page.url%20}}">{{ page.title }}</a>
+				</h2><small>{{ page.date | date_to_string }}</small>
+				<div class="post">
+					{{ content }}
+				</div>
+			</div>
+			<div id="sidebar">
+				<ul>
+					<li class="pagenav">
+						<h2>
+							Pages
+						</h2>
+						<ul>
+							<li class="page_item page-item-2">
+								<a href="http://ambientideas.com/blog/index.php/about/" title="About">About</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							Archives
+						</h2>
+						<ul>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/11/' title='November 2011'>November 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/07/' title='July 2011'>July 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/06/' title='June 2011'>June 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/05/' title='May 2011'>May 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/04/' title='April 2011'>April 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/03/' title='March 2011'>March 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2011/02/' title='February 2011'>February 2011</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/12/' title='December 2010'>December 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/11/' title='November 2010'>November 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/10/' title='October 2010'>October 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/09/' title='September 2010'>September 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/08/' title='August 2010'>August 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/07/' title='July 2010'>July 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/05/' title='May 2010'>May 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/04/' title='April 2010'>April 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2010/01/' title='January 2010'>January 2010</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/12/' title='December 2009'>December 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/10/' title='October 2009'>October 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/08/' title='August 2009'>August 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/07/' title='July 2009'>July 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/06/' title='June 2009'>June 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/05/' title='May 2009'>May 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/04/' title='April 2009'>April 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/03/' title='March 2009'>March 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/02/' title='February 2009'>February 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2009/01/' title='January 2009'>January 2009</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/12/' title='December 2008'>December 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/11/' title='November 2008'>November 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/10/' title='October 2008'>October 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/09/' title='September 2008'>September 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/08/' title='August 2008'>August 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/07/' title='July 2008'>July 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/06/' title='June 2008'>June 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/03/' title='March 2008'>March 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/02/' title='February 2008'>February 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2008/01/' title='January 2008'>January 2008</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/12/' title='December 2007'>December 2007</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/11/' title='November 2007'>November 2007</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/10/' title='October 2007'>October 2007</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/09/' title='September 2007'>September 2007</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/08/' title='August 2007'>August 2007</a>
+							</li>
+							<li>
+								<a href='http://ambientideas.com/blog/index.php/2007/07/' title='July 2007'>July 2007</a>
+							</li>
+						</ul>
+					</li>
+					<li class="categories">
+						<h2>
+							Categories
+						</h2>
+						<ul>
+							<li class="cat-item cat-item-61">
+								<a href="http://ambientideas.com/blog/index.php/category/cryptography/" title="View all posts filed under Cryptography">Cryptography</a> (1)
+							</li>
+							<li class="cat-item cat-item-68">
+								<a href="http://ambientideas.com/blog/index.php/category/game-theory/" title="View all posts filed under Game Theory">Game Theory</a> (1)
+							</li>
+							<li class="cat-item cat-item-36">
+								<a href="http://ambientideas.com/blog/index.php/category/git/" title="View all posts filed under Git">Git</a> (4)
+							</li>
+							<li class="cat-item cat-item-42">
+								<a href="http://ambientideas.com/blog/index.php/category/maven/" title="View all posts filed under Maven">Maven</a> (4)
+							</li>
+							<li class="cat-item cat-item-53">
+								<a href="http://ambientideas.com/blog/index.php/category/presentations/" title="View all posts filed under Presentations">Presentations</a> (13)
+							</li>
+							<li class="cat-item cat-item-1">
+								<a href="http://ambientideas.com/blog/index.php/category/programming/" title="View all posts filed under Programming">Programming</a> (150)
+							</li>
+						</ul>
+					</li>
+					<li id="linkcat-38" class="linkcat">
+						<h2>
+							Network
+						</h2>
+						<ul class='xoxo blogroll'>
+							<li>
+								<a href="http://www.ambientideasphotography.com" rel="me" target="_blank">AI Photography</a>
+							</li>
+							<li>
+								<a href="http://www.ambientideas.com" rel="me" target="_blank">Ambient Ideas</a>
+							</li>
+							<li>
+								<a href="http://delicious.com/matthew.mccullough" rel="me" target="_blank">Delicious</a>
+							</li>
+							<li>
+								<a href="http://www.facebook.com/people/Matthew-McCullough/658511739" rel="me" target="_blank">Facebook</a>
+							</li>
+							<li>
+								<a href="http://friendfeed.com/matthewmcc" rel="me" target="_blank">Friendfeed</a>
+							</li>
+							<li>
+								<a href="http://github.com/matthewmccullough/" rel="me" target="_blank">GitHub</a>
+							</li>
+							<li>
+								<a href="http://www.linkedin.com/in/matthewatambientideas" rel="me" target="_blank">LinkedIn</a>
+							</li>
+							<li>
+								<a href="http://www.nofluffjuststuff.com/conference/speaker/matthew_mccullough.html" rel="me" target="_blank">NFJS</a>
+							</li>
+							<li>
+								<a href="http://www.slideshare.net/matthewmccullough" rel="me" target="_blank">Slideshare</a>
+							</li>
+							<li>
+								<a href="http://twitter.com/matthewmccull" rel="me" target="_blank">Twitter</a>
+							</li>
+						</ul>
+					</li>
+					<li id="linkcat-39" class="linkcat">
+						<h2>
+							Open Source
+						</h2>
+						<ul class='xoxo blogroll'>
+							<li>
+								<a href="http://delicious.com/matthew.mccullough" rel="me" target="_blank">Delicious</a>
+							</li>
+							<li>
+								<a href="http://www.icalx.com/html/programr/year.php?cal=Denver+Developer+Events&amp;getdate=20090111" rel="me" target="_blank">Denver Java Events</a>
+							</li>
+							<li>
+								<a href="http://www.denveropensource.org" rel="me" target="_blank">Denver Open Source Users Group</a>
+							</li>
+							<li>
+								<a href="http://github.com/matthewmccullough/" rel="me" target="_blank">GitHub</a>
+							</li>
+							<li>
+								<a href="http://www.icalx.com/html/programr/year.php?cal=Java+Conferences+%26+Speaking+Events&amp;getdate=20090111" rel="me" target="_blank">Global Java Conferences</a>
+							</li>
+							<li>
+								<a href="http://www.rockyradar.com" target="_blank">Rocky Radar</a>
+							</li>
+							<li>
+								<a href="http://www.slideshare.net/matthewmccullough" rel="me" target="_blank">Slideshare</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h2>
+							Meta
+						</h2>
+						<ul>
+							<li>
+								<a href="http://ambientideas.com/blog/wp-login.php">Log in</a>
+							</li>
+							<li>
+								<a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a>
+							</li>
+							<li>
+								<a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a>
+							</li>
+							<li>
+								<a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<hr />
+			<div id="footer"></div>
+		</div><!-- Google Analytics -->
+		<script type="text/javascript">
+//<![CDATA[
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		//]]>
+		</script><script type="text/javascript">
+//<![CDATA[
+		try {
+		var pageTracker = _gat._getTracker("UA-90707-4");
+		pageTracker._trackPageview();
+		} catch(err) {}
+		//]]>
+		</script>
+	</body>
+</html>
