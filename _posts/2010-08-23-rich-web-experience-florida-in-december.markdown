@@ -24,7 +24,7 @@ tags:
 - iOS
 comments: []
 ---
-<img src="http://ambientideas.com/blog/wp-content/uploads/2010/08/RWE_2010_125X125-speaking.png" width="125" height="125" style="float:right;" />
+<img src="/blog/wp-content/uploads/2010/08/RWE_2010_125X125-speaking.png" width="125" height="125" style="float:right;" />
 <p>I'm excited to be presenting at the <a href="http://www.therichwebexperience.com/conference/fort_lauderdale/2010/11/home" target="_blank">Rich Web Experience</a> this December. It'll be a great show, but the <a href="http://www.therichwebexperience.com/conference/fort_lauderdale/2010/11/travel" target="_blank">venue location</a> simply adds to the magnetism. Who can resist beaches and Florida in December?</p>
 
 <p>I'll be doing a sharpened version of my <a href="http://www.therichwebexperience.com/conference/fort_lauderdale/2010/11/ipad_workshop" target="_blank">iOS workshop with Ben Ellingson</a>. Attendance numbers will be greatly limited compared to our last time we ran this workshop so as to give plenty of one-on-one attention to students. We'll get to use the latest iOS 4 SDK with its polished UI, developer-helpful features and Git integration.  I hope you'll consider joining us for this special one-day addition to the conference.  Ben and I will be tempted to run the workshop <a href="http://www.starwoodhotels.com/pub/media/3328/wes3328ex.81846_md.jpg" target="_blank">on the beach</a>.</p>

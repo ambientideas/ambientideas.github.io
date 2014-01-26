@@ -23,7 +23,7 @@ tags:
 - Encryption
 comments: []
 ---
-<img src="http://ambientideas.com/blog/wp-content/uploads/2010/09/IMG_0232.jpg" width="240" height="179" alt="IMG_0232.JPG" align="right" style="padding-top:5px;padding-left:5px;padding-right:5px;padding-bottom:5px;"/>
+<img src="/blog/wp-content/uploads/2010/09/IMG_0232.jpg" width="240" height="179" alt="IMG_0232.JPG" align="right" style="padding-top:5px;padding-left:5px;padding-right:5px;padding-bottom:5px;"/>
 <p>I had the privilege of presenting three talks at the <a href="http://twitter.com/matthewmccull/status/23906215016">massive JavaZone</a> in Norway this year. What an amazing conference; and to think it is all run by a Java Users Group (JUG) called <a href="http://www.java.no/web/">JavaBin</a>.</p>
 
 
