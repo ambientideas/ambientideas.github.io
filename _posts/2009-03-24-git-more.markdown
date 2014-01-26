@@ -1,0 +1,57 @@
+---
+layout: post
+status: publish
+published: true
+title: Git More
+author: Matthew McCullough
+author_login: admin
+author_email: sales@ambientideas.com
+author_url: http://www.ambientideas.com
+excerpt: 'The  folks in Minneapolis  at  NFJS  and at the  Albuquerque JUG  last week
+  had a rocking good time with Git when I presented it at both places.   ...  And  Don
+  Brown and I work on the Maven CLI plugin in a GitHub repo , for which  forking and
+  pulling has become a way of life .  ...  If you are hungry for more Git education,
+  then in addition to the  git bookmarks I''m constantly updating , take a look specifically
+  at:    The OGRE Git Tutorial   The higher-education  Git Magic eBook at Stanford   The
+  down to earth  GitHub learning pages   Or the  brand new GitGuru    Git Going...
+  and  I''ll see you in Seattle  in a little under two weeks to convince you  Why
+  Git is Better than X ! '
+wordpress_id: 122
+wordpress_url: http://ambientideas.com/blog/index.php/2009/03/git-more/
+date: 2009-03-24 21:52:03.000000000 -06:00
+categories:
+- Programming
+tags:
+- Git
+comments:
+- id: 1122
+  author: Frederic Jean
+  author_email: frederic.jean@sun.com
+  author_url: http://kenai.com
+  date: '2009-03-24 22:43:10 -0600'
+  date_gmt: '2009-03-25 05:43:10 -0600'
+  content: "Just a heads up that we are currently upgrading kenai.com and are going
+    through some maintenance in the datacenter that is hosting our infrastructure.
+    We should be back in the morning though.\r\n\r\nFred"
+---
+<p>It seems like all the cool kids were already talking about <a href="http://git-scm.com/" target="_blank">Git</a>, and now even the button-down organizations I work with are taking notice.</p>
+<ol>
+  <li><a href="http://twitter.com/headius/statuses/1367165427" target="_blank">JRuby is moving</a> over to <a href="http://kenai.com/projects/jruby/pages/Home" target="_blank">Kenai on a Git repository</a><br /></li>
+
+  <li><a href="http://github.com/blog/390-groovy-on-grails-on-github" target="_blank">Grails is on GitHub</a>. Yes, <a href="http://twitter.com/graemerocher/statuses/1382929650" target="_blank">Graeme's even excited about it</a>. And <a href="http://twitter.com/jasonrudolph/statuses/1373183745" target="_blank">Jason Rudolph is thinking he can nearly expunge his knowledge of git-svn</a>.<br /></li>
+
+  <li>And my favorite <a href="http://twitter.com/headius/statuses/1220874739" target="_blank">Peanut butter and Chocolate story of Maven, Git and Ruby Gems</a> is on <a href="http://github.com/headius/maven_gem/tree/master" target="_blank">a GitHub repo</a>.<br /></li>
+</ol>
+<p>The <a href="http://twitter.com/tjmaki/statuses/1338713264" target="_blank">folks in Minneapolis</a> at <a href="http://twitter.com/matthewmccull/statuses/1336996156" target="_blank">NFJS</a> and at the <a href="http://www.abqjug.org" target="_blank">Albuquerque JUG</a> last week had a rocking good time with Git when I presented it at both places.</p>
+<p><a href="http://twitter.com/jvanzyl/statuses/1229684005" target="_blank">Jason van Zyl of Maven fame has caught the Git bug too</a>. And <a href="http://wiki.github.com/mrdon/maven-cli-plugin" target="_blank">Don Brown and I work on the Maven CLI plugin in a GitHub repo</a>, for which <a href="http://github.com/mrdon/maven-cli-plugin/network" target="_blank">forking and pulling has become a way of life</a>.</p>
+<p>Part of this surge on Git is spurred by the fact that great new training materials are sprouting right and left. If you are hungry for more Git education, then in addition to the <a href="http://delicious.com/matthew.mccullough/git" target="_blank">git bookmarks I'm constantly updating</a>, take a look specifically at:</p>
+<ol>
+  <li><a href="http://excess.org/article/2008/07/ogre-git-tutorial/" target="_blank">The OGRE Git Tutorial</a></li>
+
+  <li>The higher-education <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" target="_blank">Git Magic eBook at Stanford</a></li>
+
+  <li>The down to earth <a href="http://learn.github.com/" target="_blank">GitHub learning pages</a></li>
+
+  <li>Or the <a href="http://gitguru.com/" target="_blank">brand new GitGuru</a></li>
+</ol>
+<p>Git Going... and <a href="http://www.nofluffjuststuff.com/conference/seattle/2009/04/index.html" target="_blank">I'll see you in Seattle</a> in a little under two weeks to convince you <a href="http://whygitisbetterthanx.com/" target="_blank">Why Git is Better than X</a>!</p>

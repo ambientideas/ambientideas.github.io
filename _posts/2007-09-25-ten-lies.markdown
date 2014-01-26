@@ -1,0 +1,18 @@
+---
+layout: post
+status: publish
+published: true
+title: Ten Lies
+author: Matthew McCullough
+author_login: admin
+author_email: sales@ambientideas.com
+author_url: http://www.ambientideas.com
+wordpress_id: 76
+wordpress_url: http://ambientideas.com/blog/index.php/2007/09/ten-lies/
+date: 2007-09-25 20:59:00.000000000 -06:00
+categories:
+- Programming
+tags: []
+comments: []
+---
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px">I found this interesting "Top Ten" list by Markus Merz. Worth a quick read for future thought when you are acting as a freelancer and your potential customer mentions one of these:<br /></p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px"><br /></p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">1. "Do this one cheap (or free) and we'll make it up on the next one."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">2. "We never pay a cent until we see the final product."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">3. "Do this for us and you'll get great exposure! The jobs will just pour in!"</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">4. On looking at sketches or concepts: "Well, we aren't sure if we want to use you yet, but leave your material here so I can talk to my partner/investor/wife/clergy."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">5. "Well, the job isn't CANCELLED, just delayed. Keep the account open and we'll continue in a month or two."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">6. "Contract? We don't need no stinking contact! Aren't we friends?"</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">7. "Send me a bill after the work goes to press."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">8. "The last guy did it for XXX dollars."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">9. "Our budget is XXX dollars, firm."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">10. "We are having financial problems. Give us the work, we'll make some money and we'll pay you. Simple."</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><br /></p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Original Article:</p><br /><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><a href="http://performancing.com/revenue/top-ten-lies-every-freelance-writer-or-artist-must-know">http://performancing.com/revenue/top-ten-lies-every-freelance-writer-or-artist-must-know</a></p><br /><br /><a href="http://www.paintercreativity.com/articles/top-10-lies.html">http://www.paintercreativity.com/articles/top-10-lies.html</a><br /><br /><br /><br /><br /><br /><br />

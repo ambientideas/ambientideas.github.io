@@ -1,0 +1,4 @@
+name: Ambient Ideas
+markdown: redcarpet
+pygments: true
+permalink: /blog/index.php/:year/:month/:title/

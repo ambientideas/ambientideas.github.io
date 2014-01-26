@@ -1,0 +1,18 @@
+---
+layout: post
+status: publish
+published: true
+title: How To Write A Press Release for Your Services
+author: Matthew McCullough
+author_login: admin
+author_email: sales@ambientideas.com
+author_url: http://www.ambientideas.com
+wordpress_id: 74
+wordpress_url: http://ambientideas.com/blog/index.php/2007/09/how-to-write-a-press-release-for-your-services/
+date: 2007-09-26 06:52:00.000000000 -06:00
+categories:
+- Programming
+tags: []
+comments: []
+---
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">An interesting article about maximizing your freelancing exposure through a press release about research you've performed or skills you've gained:</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">"If you have an interesting story to tell, a press release will help you to make newspaper editors aware of it.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Maybe you recently won an award. Maybe you stumbled upon some interesting information in the field you work in. Or maybe your design contributed towards some kind of achievement on behalf of your client.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Depending on the scale and content of your story, you can send your press release to marketing websites, marketing magazines, the relevant trade press, the regional press, and even the business section of the national press."</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Examples:</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">"How a mouse can make you look 10 years younger.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">A release in a fashion magazine about the work of a Photoshop specialist who touches up photo-portraits.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Color purple gets people spending.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">A release in an advertising magazine about how purple advertisements are the most effective at driving sales.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">Company makes $500,000 by opening doors six inches wider.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">A release in a marketing magazine, about how a photographer advised her door manufacturing client to re-shoot the company catalog. Photos of closed doors were changed to doors that were slightly ajar—a decision which resulted in extra sales.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px"><br /></p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">How to hire a full-service marketing agency for just ten bucks.</p><br /><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica">A release about a new breed of freelance copywriter/designers, featuring a freelance designer who has recently integrated copywriting into her service—and is introducing the service to new clients for ten dollars per page."</p><br /><p><a href="http://freelanceswitch.com/finding/how-to-write-a-press-release-for-your-services/">http://freelanceswitch.com/finding/how-to-write-a-press-release-for-your-services/</a></p><br /><br />
