@@ -28,4 +28,4 @@ comments: []
 <p>These videos aim to give you a ground-up tutorial on the mechanics <strong>and usage</strong> of the <a href="http://git-scm.org">Git distributed version control system</a>. With the recent milestones of 1,500,000 repositories and 500,000 users at <a href="http://github.com">GitHub</a>, the premier place to host Git repositories in a collaborative and dare I say, social way, Git is gaining incredible traction with software craftsmen and craftswomen everywhere.</p>
 
 <p>A few fantastic comments have been made about the videos in the few days that they've been on the market. Here's one from a good friend and long-time NFJS attendee, Darin Pope:</p>
-<img src="http://ambientideas.com/blog/wp-content/uploads/2011/02/Git-OReilly-Videos-1.png" alt="Darin Pope's Comment about the Git Master Class O'Reilly Videos" title="Git O'Reilly Videos - Darin Pope Comment" border="0" width="400" height="600" />
+<img src="/blog/wp-content/uploads/2011/02/Git-OReilly-Videos-1.png" alt="Darin Pope's Comment about the Git Master Class O'Reilly Videos" title="Git O'Reilly Videos - Darin Pope Comment" border="0" width="400" height="600" />

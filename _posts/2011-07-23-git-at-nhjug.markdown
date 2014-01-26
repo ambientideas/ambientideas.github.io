@@ -23,7 +23,7 @@ comments: []
 <h2>NHJUG</h2>
 <p>I had the wonderful opportunity of being sponsored by <a href="http://nofluffjuststuff.com">No Fluff, Just Stuff Symposiums</a> to speak at the <a href="http://www.nejug.org/events/show/129">New Hampshire JUG</a> in Portsmouth on Tuesday. It was a lively crowd of 20 or so persons hosted by the excellent <a href="http://twitter.com/TheSleepyVegan">Ted Pennings</a>, <a href="http://pblog.theothermattm.com/">Matt Merrill</a>, <a href="http://twitter.com/nh_jug">NHJUG</a>, and <a href="http://twitter.com/curryscott">Scott Curry</a>.
 
-<img src="http://ambientideas.com/blog/wp-content/uploads/2011/07/portsmouth-nejug1.jpg" alt="Portsmouth nejug" title="portsmouth-nejug.JPG" border="0" width="600" height="448" />
+<img src="/blog/wp-content/uploads/2011/07/portsmouth-nejug1.jpg" alt="Portsmouth nejug" title="portsmouth-nejug.JPG" border="0" width="600" height="448" />
 
 We discussed Git, GitHub, IntelliJ, and eGit with regards to their importance to the broad JVM ecosystem. Many insightful questions were asked, such as "is the efficiency of the hard links to unchanged blobs maintained on Windows." The answer was yes, because this is not actually a POSIX <em>hardlink</em> for commits, but rather an implementation <strong>like, but not exactly hardlinks</strong> inside Git <em>tree</em> objects.<p>
 

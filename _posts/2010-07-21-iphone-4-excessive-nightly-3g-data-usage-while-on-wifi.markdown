@@ -57,5 +57,5 @@ A <a href="http://forums.macrumors.com/showthread.php?t=929936&amp;page=2" targe
 <h2>Conclusion</h2>
 <p>The only logical explanation is that everyone is just holding it the wrong way, thereby causing it to use more data on 3G than it should.</p>
 <p>.
-<img src="http://ambientideas.com/blog/wp-content/uploads/2010/07/Apple-iPhone-4-Press-Conference-CSI-Miami.png" width="440" height="480" alt="Apple iPhone 4 Press Conference, CSI Miami.png" />
+<img src="/blog/wp-content/uploads/2010/07/Apple-iPhone-4-Press-Conference-CSI-Miami.png" width="440" height="480" alt="Apple iPhone 4 Press Conference, CSI Miami.png" />
 </p>

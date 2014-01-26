@@ -35,7 +35,7 @@ comments: []
 <h2>JavaZone in Norway</h2>
 
 
-<img src="http://ambientideas.com/blog/wp-content/uploads/2010/10/IMG_04921.jpg" width="480" height="358" alt="Besseggen, Memurubu Hike" align="right" style="padding-top:5px;padding-left:5px;padding-right:5px;padding-bottom:5px;"/>
+<img src="/blog/wp-content/uploads/2010/10/IMG_04921.jpg" width="480" height="358" alt="Besseggen, Memurubu Hike" align="right" style="padding-top:5px;padding-left:5px;padding-right:5px;padding-bottom:5px;"/>
 <p>The ever-excellent <a href="http://www.java.no/">JavaBin User Group</a> in Norway put on a stellar conference called <a href="http://jz10.java.no/">JavaZone</a> for 2000+ people. What a show! The diversity of talk formats, speakers, and topics is simply incredible. After the conference, about 25 of us experienced a once-in-a-lifetime event of hiking in the Norwegian countryside. The <a href="http://jz10.java.no/images/foredragsholdere.png">otherworldly photos</a> and <a href="http://jz10.java.no/journey.html">hike details</a> will make you want to attend next year!</p>
 
 <p>The sessions are recorded at JavaZone and two of mine are available online. The former was in the big room in a formal setting. The latter talk was in a smaller room at the end of the conference and had a more informal feel where questions could be asked of the audience and vice-versa.

@@ -20,7 +20,7 @@ tags:
 - Encryption
 comments: []
 ---
-<a href="http://oredev.org/2010" target="_blank"><img src="http://ambientideas.com/blog/wp-content/uploads/2010/08/Oredev-Logo.jpg"></img></a>
+<a href="http://oredev.org/2010" target="_blank"><img src="/blog/wp-content/uploads/2010/08/Oredev-Logo.jpg"></img></a>
 <p>I had the pleasure of <a href="http://oredev.org/2010/speakers/matthew-mccullough" target="_blank">presenting two talks</a> at <a href="http://oredev.org/2010" target="_blank">Øredev</a> this week. For those of you that asked, here are the slides and the code samples:</p>
 
 <ul>
