@@ -20,7 +20,7 @@ tags:
 - bugtracking
 comments: []
 ---
-<p>I recently had the chance to get a demo of <a href="http://jetbrains.com">JetBrains</a> products' <a href="http://git-scm.com.com/">Git</a> integration and to meet some of the JetBrains development team in person at <a href="http://oredev.org/2011">Øredev</a> in Malmö, Sweden.</p>
+<p>I recently had the chance to get a demo of <a href="http://jetbrains.com">JetBrains</a> products' <a href="http://git-scm.com/">Git</a> integration and to meet some of the JetBrains development team in person at <a href="http://oredev.org/2011">Øredev</a> in Malmö, Sweden.</p>
 
 <p>I love seeing things integrate better with the <a href="http://developer.github.com/v3/">GitHub API</a>. It really is fantastic to see what is possible when a rich Internet application additionally becomes a platform for apps that extend the core value proposition. <a href="http://github.com">GitHub</a> has executed on this quite well with their <a href="http://developer.github.com/v3/">API, now at version 3.0</a> and with features like gist, repo, user, and even organization management.</p>
 
