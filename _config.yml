@@ -1,4 +1,4 @@
 name: Ambient Ideas
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: rouge
 permalink: /blog/index.php/:year/:month/:title/
