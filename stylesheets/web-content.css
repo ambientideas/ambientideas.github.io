@@ -23,6 +23,10 @@
 		width:290px;
 		position:absolute;
 		background-image: url(../images/layout/content/bottles.png);
+
+		/* Decorative only: the box overhangs the banner and would
+		   otherwise swallow clicks on the content beneath it. */
+		pointer-events:none;
 	}
 	
 	.banner h1{
