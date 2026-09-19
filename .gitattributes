@@ -1,0 +1,24 @@
+# Normalise all text to LF in the repository and in the working tree.
+#
+# Without this, the global core.autocrlf setting decides, and this repo has
+# drifted into a mixed state: some pages are stored with CRLF, some
+# stylesheets are stored with LF but checked out as CRLF. Either way a
+# one-line edit came out as a whole-file diff, which hides the real change.
+* text=auto eol=lf
+
+# Binary files git must never touch.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.swf   binary
+*.gz    binary
+*.pdf   binary
+*.mp3   binary
+*.mov   binary
+*.zip   binary
+*.eot   binary
+*.ttf   binary
+*.woff  binary
+*.woff2 binary
