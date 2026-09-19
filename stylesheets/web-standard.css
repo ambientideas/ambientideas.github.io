@@ -11,6 +11,35 @@ body{
 	background-color:#05509e;
 }
 
+/* Sticky footer.
+   On a phone the viewport is far taller than this page has content to fill
+   (roughly 1900 CSS px against 860), which left a tall band of bare body
+   background below the footer. Letting the content area absorb the slack
+   keeps the footer at the bottom of the screen instead. */
+html{
+	height:100%;
+}
+
+body{
+	min-height:100%;
+	display:flex;
+	flex-direction:column;
+}
+
+	/* Fixed bands keep their own height. */
+	body > .top,
+	body > .banner,
+	body > .footer{
+		flex:0 0 auto;
+	}
+
+	/* The content area grows: .body on the hand-maintained pages,
+	   #page on the blog layout. */
+	body > .body,
+	body > #page{
+		flex:1 0 auto;
+	}
+
 p{
 	font-size: 10pt;
 }
@@ -184,7 +213,10 @@ a:visited{
 .footer{
 	background:url(../images/layout/shadow-up-tile.jpg);
 	background-repeat:repeat-x;
-	height:100px;
+	/* The pullquote in the footer is taller than 100px, so a fixed height
+	   made it overflow. Let the band grow to fit its content. */
+	min-height:100px;
+	overflow:auto;
 	clear:both;
 	
 	/*Shadow border top. Push content lower*/
