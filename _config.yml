@@ -1,4 +1,9 @@
 url: https://ambientideas.com
+# The imported WordPress dates carry Denver offsets (-06:00/-07:00) and the
+# post filenames use the Denver-local date. Without this, the build renders
+# dates in the build machine's zone: GitHub builds in UTC, which pushed every
+# evening post a day forward on the live site.
+timezone: America/Denver
 name: Ambient Ideas
 markdown: kramdown
 highlighter: rouge
