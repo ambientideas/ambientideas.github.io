@@ -1,8 +1,8 @@
 name: Build
 
 on:
-  push:
-    branches: [master]
+  # Pushes to master are covered by deploy.yml, which runs the same
+  # `rake test` before publishing. This workflow now guards pull requests.
   pull_request:
 
 jobs:
@@ -16,6 +16,6 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      # Builds with the github-pages gem (same Jekyll GitHub Pages runs),
-      # then checks internal links and images on the hand-maintained pages.
+      # Builds with the same Jekyll deploy.yml publishes with, then checks
+      # internal links and images on the hand-maintained pages.
       - run: bundle exec rake test

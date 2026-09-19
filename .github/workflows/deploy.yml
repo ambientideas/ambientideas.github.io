@@ -1,0 +1,52 @@
+name: Deploy
+
+# Builds the site ourselves and publishes the result, replacing GitHub's
+# legacy Pages builder. That builder is frozen on Jekyll 3.10 and only
+# permits its own allowlisted plugins; building here tracks current Jekyll.
+#
+# Requires Settings > Pages > Source set to "GitHub Actions".
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it part-way.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - uses: actions/configure-pages@v5
+
+      # Same build and link check the PR workflow runs.
+      - run: bundle exec rake test
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
