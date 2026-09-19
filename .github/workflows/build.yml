@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      # Builds with the github-pages gem (same Jekyll GitHub Pages runs),
+      # then checks internal links and images on the hand-maintained pages.
+      - run: bundle exec rake test
